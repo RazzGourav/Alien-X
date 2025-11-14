@@ -45,71 +45,71 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 5.9% 10%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 5.9% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(240 5.9% 10%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
+  --muted: hsl(240 4.8% 95.9%);
+  --muted-foreground: hsl(240 3.8% 46.1%);
+  --accent: hsl(240 4.8% 95.9%);
+  --accent-foreground: hsl(240 5.9% 10%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --border: hsl(240 5.9% 90%);
+  --input: hsl(240 5.9% 90%);
+  --ring: hsl(240 4.9% 83.9%);
+  --chart-1: oklch(0.646 0.222 41.116 / 1);
+  --chart-2: oklch(0.6 0.118 184.704 / 1);
+  --chart-3: oklch(0.398 0.07 227.392 / 1);
+  --chart-4: oklch(0.828 0.189 84.429 / 1);
+  --chart-5: oklch(0.769 0.188 70.08 / 1);
+  --sidebar: oklch(0.985 0 0 / 1);
+  --sidebar-foreground: oklch(0.145 0 0 / 1);
+  --sidebar-primary: oklch(0.205 0 0 / 1);
+  --sidebar-primary-foreground: oklch(0.985 0 0 / 1);
+  --sidebar-accent: oklch(0.97 0 0 / 1);
+  --sidebar-accent-foreground: oklch(0.205 0 0 / 1);
+  --sidebar-border: oklch(0.922 0 0 / 1);
+  --sidebar-ring: oklch(0.708 0 0 / 1);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.298 0.04 150); /* #344e41 */
+  --foreground: oklch(0.853 0.02 100); /* #dad7cd */
+  --card: oklch(1 0 0);                   /* PURE WHITE */
+  --card-foreground: oklch(0.145 0 0);     /* DARK GRAY/BLACK TEXT */
+  --popover: oklch(0.298 0.04 150); /* #344e41 */
+  --popover-foreground: oklch(0.853 0.02 100); /* #dad7cd */
+  --primary: oklch(0.484 0.08 145); /* #588157 */
+  --primary-foreground: oklch(0.853 0.02 100); /* #dad7cd */
+  --secondary: oklch(0.702 0.07 130); /* #a3b18a */
+  --secondary-foreground: oklch(0.298 0.04 150); /* #344e41 */
+  --muted: oklch(0.348 0.06 150); /* #3a5a40 */
+  --muted-foreground: oklch(0.702 0.07 130); /* #a3b18a */
+  --accent: oklch(0.702 0.07 130); /* #a3b18a */
+  --accent-foreground: oklch(0.298 0.04 150); /* #344e41 */
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --border: oklch(0.348 0.06 150); /* #3a5a40 */
+  --input: oklch(0.348 0.06 150); /* #3a5a40 */
+  --ring: oklch(0.702 0.07 130); /* #a3b18a */
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar: oklch(0.298 0.04 150); /* #344e41 */
+  --sidebar-foreground: oklch(0.853 0.02 100); /* #dad7cd */
+  --sidebar-primary: oklch(0.484 0.08 145); /* #588157 */
+  --sidebar-primary-foreground: oklch(0.853 0.02 100); /* #dad7cd */
+  --sidebar-accent: oklch(0.348 0.06 150); /* #3a5a40 */
+  --sidebar-accent-foreground: oklch(0.853 0.02 100); /* #dad7cd */
+  --sidebar-border: oklch(0.348 0.06 150); /* #3a5a40 */
+  --sidebar-ring: oklch(0.702 0.07 130); /* #a3b18a */
 }
 
 @layer base {
@@ -119,4 +119,37 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Add this block to the very bottom of frontend/app/globals.css */
+
+/* This targets the base Card component and applies the glow */
+.dark .card {
+    /* Added a subtle white/light layer (oklch(1 0 0) is pure white) */
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.5), 
+        0 0 10px 0px oklch(1 0 0 / 0.2), /* <--- THIS IS THE NEW WHITE GLOW */
+        0 0 20px 1px oklch(from var(--primary) h c l / 0.5); /* The existing green glow */
+    
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.dark .card:hover {
+    /* Also update the hover state for consistency */
+    box-shadow: 
+        0 0 12px rgba(0, 0, 0, 0.6),
+        0 0 15px 3px oklch(1 0 0 / 0.3), /* The new light hover glow */
+        0 0 25px 3px oklch(from var(--primary) h c l / 0.8);
+}
+
+/* Optional: Subtle lift and glow on hover */
+.dark .card:hover {
+    box-shadow: 
+        0 0 12px rgba(0, 0, 0, 0.6),
+        0 0 25px 3px oklch(from var(--primary) h c l / 0.8);
+}
+.nav-bg-darker {
+    /* Set the lightness component (L) lower than the main body (0.298) */
+    background-color: oklch(0.26 0.04 150); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Add a subtle drop shadow */
 }

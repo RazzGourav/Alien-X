@@ -15,7 +15,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Settings } from 'lucide-react'; // <-- Import Settings icon
 import {
   Table,
   TableBody,
@@ -24,9 +24,31 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetFooter,
+  SheetClose
+} from "@/components/ui/sheet"; // <-- Import Sheet
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"; // <-- Import Tabs
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"; // <-- Import Accordion
 
 // Define types for our data
-interface Settings {
+interface SettingsData {
   salary: number;
   limit: number;
 }
@@ -38,7 +60,7 @@ interface Expense {
 }
 
 export default function ExpensesPage() {
-  const [settings, setSettings] = useState<Settings>({ salary: 0, limit: 0 });
+  const [settings, setSettings] = useState<SettingsData>({ salary: 0, limit: 0 });
   const [allExpenses, setAllExpenses] = useState<Expense[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -47,7 +69,7 @@ export default function ExpensesPage() {
   const [salaryForm, setSalaryForm] = useState('');
   const [limitForm, setLimitForm] = useState('');
 
-  // Fetch initial data
+  // ... (Keep your existing useEffect to fetch data) ...
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -74,7 +96,7 @@ export default function ExpensesPage() {
     fetchData();
   }, []);
 
-  // Handle saving settings
+  // ... (Keep your existing handleSubmit for settings) ...
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -102,38 +124,24 @@ export default function ExpensesPage() {
     }
   };
 
-  // --- CALCULATIONS & GROUPING ---
+  // --- RE-ORGANIZE CALCULATIONS ---
 
-  // 1. Calculate this month's spending
-  const totalSpentThisMonth = useMemo(() => {
-    const now = new Date();
-    const currentMonth = now.getMonth();
-    const currentYear = now.getFullYear();
+  // 1. Helper to format a date
+  const formatMonthYear = (date: Date) => {
+    return date.toLocaleString('default', {
+      month: 'long',
+      year: 'numeric',
+    });
+  };
 
-    return allExpenses.reduce((sum, expense) => {
-      const expenseDate = new Date(expense.date);
-      if (
-        expenseDate.getMonth() === currentMonth &&
-        expenseDate.getFullYear() === currentYear
-      ) {
-        return sum + (expense.amount || 0);
-      }
-      return sum;
-    }, 0);
-  }, [allExpenses]);
+  // 2. Get current month string
+  const currentMonthYear = formatMonthYear(new Date());
 
-  // 2. Calculate summary numbers
-  const remainingLimit = settings.limit - totalSpentThisMonth;
-  const savings = settings.salary - totalSpentThisMonth;
-
-  // 3. Group all expenses by month
+  // 3. Group ALL expenses by month (for all tabs)
   const expensesByMonth = useMemo(() => {
     return allExpenses.reduce((acc, expense) => {
       const date = new Date(expense.date);
-      const monthYear = date.toLocaleString('default', {
-        month: 'long',
-        year: 'numeric',
-      });
+      const monthYear = formatMonthYear(date);
       
       if (!acc[monthYear]) {
         acc[monthYear] = [];
@@ -143,17 +151,111 @@ export default function ExpensesPage() {
     }, {} as Record<string, Expense[]>);
   }, [allExpenses]);
 
-  // Get sorted month keys
-  const sortedMonthKeys = Object.keys(expensesByMonth).sort((a, b) => {
-    return new Date(b).getTime() - new Date(a).getTime();
-  });
+  // 4. Get expenses for just this month (for summary)
+  const thisMonthExpenses = expensesByMonth[currentMonthYear] || [];
+  const totalSpentThisMonth = thisMonthExpenses.reduce((sum, exp) => sum + (exp.amount || 0), 0);
+  const remainingLimit = settings.limit - totalSpentThisMonth;
+  const savings = settings.salary - totalSpentThisMonth;
+  
+  // 5. Get sorted keys for "All History" (excluding this month)
+  const sortedHistoryKeys = Object.keys(expensesByMonth)
+    .filter(monthYear => monthYear !== currentMonthYear)
+    .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
+
+  // Helper component for the transaction table
+  const TransactionTable = ({ expenses }: { expenses: Expense[] }) => (
+    <Card>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Merchant</TableHead>
+            <TableHead>Date</TableHead>
+            <TableHead>Category</TableHead>
+            <TableHead className="text-right">Amount</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {expenses.length > 0 ? (
+            expenses.map((expense, idx) => (
+              <TableRow key={idx}>
+                <TableCell className="font-medium">{expense.merchant}</TableCell>
+                <TableCell>{new Date(expense.date).toLocaleDateString()}</TableCell>
+                <TableCell>{expense.category}</TableCell>
+                <TableCell className="text-right">${expense.amount.toFixed(2)}</TableCell>
+              </TableRow>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={4} className="text-center text-muted-foreground">
+                No transactions for this month.
+              </TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    </Card>
+  );
 
   return (
     <div className="p-8 max-w-7xl mx-auto">
+      {/* --- NEW HEADER --- */}
       <header className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">My Expenses</h1>
-        <UserButton afterSignOutUrl="/" />
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Expenses</h1>
+          <p className="text-muted-foreground">Review your spending and manage settings.</p>
+        </div>
+        
+        {/* --- SETTINGS SHEET TRIGGER --- */}
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon">
+              <Settings className="h-4 w-4" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent>
+            <SheetHeader>
+              <SheetTitle>Financial Settings</SheetTitle>
+              <SheetDescription>
+                Set your monthly salary and target expense limit. This helps the AI
+                give you better advice.
+              </SheetDescription>
+            </SheetHeader>
+            <form onSubmit={handleSubmit} className="space-y-6 mt-6">
+              <div className="space-y-2">
+                <Label htmlFor="salary">Monthly Salary</Label>
+                <Input
+                  id="salary"
+                  type="number"
+                  placeholder="5000"
+                  value={salaryForm}
+                  onChange={(e) => setSalaryForm(e.target.value)}
+                  min="0"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="limit">Monthly Expense Limit</Label>
+                <Input
+                  id="limit"
+                  type="number"
+                  placeholder="2000"
+                  value={limitForm}
+                  onChange={(e) => setLimitForm(e.target.value)}
+                  min="0"
+                />
+              </div>
+              <SheetFooter>
+                <SheetClose asChild>
+                  <Button type="submit" disabled={isSaving} className="w-full">
+                    {isSaving && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                    Save / Update Settings
+                  </Button>
+                </SheetClose>
+              </SheetFooter>
+            </form>
+          </SheetContent>
+        </Sheet>
       </header>
+      {/* --- END OF NEW HEADER --- */}
 
       <div className="mb-8">
         <Header />
@@ -173,9 +275,6 @@ export default function ExpensesPage() {
               <Card>
                 <CardHeader>
                   <CardTitle>Total Spent</CardTitle>
-                  <CardDescription>
-                    Your spending for {new Date().toLocaleString('default', { month: 'long' })}.
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-3xl font-bold">
@@ -186,9 +285,6 @@ export default function ExpensesPage() {
               <Card>
                 <CardHeader>
                   <CardTitle>Limit Remaining</CardTitle>
-                  <CardDescription>
-                    Based on your ${settings.limit} limit.
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className={`text-3xl font-bold ${remainingLimit < 0 ? 'text-destructive' : 'text-green-600'}`}>
@@ -199,9 +295,6 @@ export default function ExpensesPage() {
               <Card>
                 <CardHeader>
                   <CardTitle>Est. Savings</CardTitle>
-                  <CardDescription>
-                    Based on your ${settings.salary} salary.
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-3xl font-bold">
@@ -212,84 +305,40 @@ export default function ExpensesPage() {
             </div>
           </section>
 
-          {/* --- SECTION 2: SETTINGS FORM --- */}
-          <Card className="w-full">
-            <CardHeader>
-              <CardTitle>Financial Settings</CardTitle>
-              <CardDescription>
-                Set your monthly salary and target expense limit.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="grid md:grid-cols-3 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="salary">Monthly Salary</Label>
-                  <Input
-                    id="salary"
-                    type="number"
-                    placeholder="5000"
-                    value={salaryForm}
-                    onChange={(e) => setSalaryForm(e.target.value)}
-                    min="0"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="limit">Monthly Expense Limit</Label>
-                  <Input
-                    id="limit"
-                    type="number"
-                    placeholder="2000"
-                    value={limitForm}
-                    onChange={(e) => setLimitForm(e.target.value)}
-                    min="0"
-                  />
-                </div>
-                <Button type="submit" disabled={isSaving} className="self-end">
-                  {isSaving && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  Save / Update Settings
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          {/* --- SECTION 3: TRANSACTION HISTORY --- */}
+          {/* --- SECTION 2: TRANSACTION HISTORY TABS --- */}
           <section>
             <h2 className="text-2xl font-semibold mb-4">Transaction History</h2>
-            <div className="space-y-6">
-              {sortedMonthKeys.length > 0 ? (
-                sortedMonthKeys.map((monthYear) => (
-                  <div key={monthYear}>
-                    <h3 className="text-lg font-medium mb-2">{monthYear}</h3>
-                    <Card>
-                      <Table>
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead>Merchant</TableHead>
-                            <TableHead>Date</TableHead>
-                            <TableHead>Category</TableHead>
-                            <TableHead className="text-right">Amount</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {expensesByMonth[monthYear].map((expense, idx) => (
-                            <TableRow key={idx}>
-                              <TableCell className="font-medium">{expense.merchant}</TableCell>
-                              <TableCell>{new Date(expense.date).toLocaleDateString()}</TableCell>
-                              <TableCell>{expense.category}</TableCell>
-                              <TableCell className="text-right">${expense.amount.toFixed(2)}</TableCell>
-                            </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
-                    </Card>
-                  </div>
-                ))
-              ) : (
-                <p className="text-muted-foreground text-center">
-                  You have no expenses recorded. Try uploading some receipts!
-                </p>
-              )}
-            </div>
+            <Tabs defaultValue="this-month">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="this-month">This Month</TabsTrigger>
+                <TabsTrigger value="all-history">All History</TabsTrigger>
+              </TabsList>
+              
+              {/* --- THIS MONTH'S TRANSACTIONS --- */}
+              <TabsContent value="this-month" className="mt-4">
+                <TransactionTable expenses={thisMonthExpenses} />
+              </TabsContent>
+              
+              {/* --- ALL HISTORY ACCORDION --- */}
+              <TabsContent value="all-history" className="mt-4">
+                {sortedHistoryKeys.length > 0 ? (
+                  <Accordion type="single" collapsible className="w-full">
+                    {sortedHistoryKeys.map((monthYear) => (
+                      <AccordionItem value={monthYear} key={monthYear}>
+                        <AccordionTrigger>{monthYear}</AccordionTrigger>
+                        <AccordionContent>
+                          <TransactionTable expenses={expensesByMonth[monthYear]} />
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                ) : (
+                  <p className="text-muted-foreground text-center py-8">
+                    No other history found.
+                  </p>
+                )}
+              </TabsContent>
+            </Tabs>
           </section>
 
         </main>

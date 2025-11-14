@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className="dark">
         <body className={inter.className}>
           {children}
           <Toaster /> {/* <-- THIS IS THE SONNER TOASTER */}
