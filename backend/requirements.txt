@@ -1,4 +1,5 @@
 fastapi
+fastapi-cors
 uvicorn
 python-multipart
 google-cloud-documentai

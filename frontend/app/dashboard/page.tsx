@@ -3,38 +3,38 @@ import { ReceiptUploader } from '@/components/ReceiptUploader';
 import { UserButton } from '@clerk/nextjs';
 import { Header } from '@/components/Header';
 import { ChatWindow } from '@/components/ChatWindow';
+import { FinancialReport } from '@/components/FinancialReport';
 
 export default function DashboardPage() {
   return (
-    <div className="p-8">
-      <header className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">My Financial Dashboard</h1>
+    <div className="p-8 max-w-7xl mx-auto">
+      <header className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+          <p className="text-muted-foreground">Manage your finances with AI.</p>
+        </div>
         <UserButton afterSignOutUrl="/" />
-      </header> {/* <-- THIS IS THE CORRECTED LINE */}
+      </header>
 
       <div className="mb-8">
         <Header />
       </div>
 
-      <main className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Column 1: Core Action (Phase 2) */}
-        <ReceiptUploader />
+      <main className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        {/* Left Column: Upload & Chat (Span 7 cols) */}
+        <div className="lg:col-span-7 space-y-8">
+          <section>
+             <ReceiptUploader />
+          </section>
+          <section>
+             <ChatWindow />
+          </section>
+        </div>
 
-        {/* Column 2: Replaced Placeholder with Chat (Phase 3) */}
-        <div className="space-y-8">
-          
-          {/* --- THIS IS THE NEW CHAT WINDOW --- */}
-          <ChatWindow />
-          
-          {/* Placeholder for Insights (Phase 4) */}
-          <div className="p-6 border rounded-lg h-64">
-            <h2 className="text-3xl font-semibold mb-2">
-              Generative Insights
-            </h2>
-            <p className="text-muted-foreground">
-              (Financial summary coming soon...)
-            </p>
-          </div>
+        {/* Right Column: Insights Report (Span 5 cols) */}
+        <div className="lg:col-span-5">
+           {/* 2. REPLACE AiReport WITH FinancialReport */}
+           <FinancialReport />
         </div>
       </main>
     </div>

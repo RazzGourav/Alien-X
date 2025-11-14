@@ -1,14 +1,14 @@
-// frontend/components/ChatWindow.tsx
+// frontend/components/ChatAboutDocument.tsx
 'use client';
 
 import { useState } from 'react';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -22,7 +22,18 @@ interface Message {
   content: string;
 }
 
-export function ChatWindow() {
+// Define the props, including the receipt data
+interface ChatAboutDocumentProps {
+  isOpen: boolean;
+  onClose: () => void;
+  documentData: any; // This will be the JSON from the receipt
+}
+
+export function ChatAboutDocument({
+  isOpen,
+  onClose,
+  documentData,
+}: ChatAboutDocumentProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -34,22 +45,23 @@ export function ChatWindow() {
 
     setIsLoading(true);
     const userMessage: Message = { role: 'user', content: input };
-
-    // Add user's message to the chat
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
 
     try {
       const token = await getToken(); // <-- 3. GET THE CLERK TOKEN
 
-      // Call our Next.js API proxy route
-      const response = await fetch('/api/ask', {
+      // THIS IS A NEW API ROUTE
+      const response = await fetch('/api/ask-document', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`, // <-- 4. ADD THE TOKEN
         },
-        body: JSON.stringify({ question: input }),
+        body: JSON.stringify({
+          question: input,
+          document_data: documentData, // We send the receipt data *with* the question
+        }),
       });
 
       if (!response.ok) {
@@ -58,30 +70,35 @@ export function ChatWindow() {
 
       const data = await response.json();
       const aiMessage: Message = { role: 'ai', content: data.answer };
-
-      // Add AI's message to the chat
       setMessages((prev) => [...prev, aiMessage]);
     } catch (error: any) {
       toast.error('Error', { description: error.message });
-      // Put the user's message back in the input box for retry
       setInput(userMessage.content);
-      // Remove the user's message from the chat
       setMessages((prev) => prev.slice(0, -1));
     } finally {
       setIsLoading(false);
     }
   };
 
+  // Function to handle closing the dialog
+  const handleOnOpenChange = (open: boolean) => {
+    if (!open) {
+      onClose();
+      setMessages([]); // Clear chat history when closed
+    }
+  };
+
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <CardTitle>Chat with LUMEN-Agent</CardTitle>
-        <CardDescription>
-          Ask questions about your spending, like "How much did I spend at
-          Starbucks?"
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="flex flex-col h-[400px]">
+    <Dialog open={isOpen} onOpenChange={handleOnOpenChange}>
+      <DialogContent className="sm:max-w-[500px] h-[600px] flex flex-col">
+        <DialogHeader>
+          <DialogTitle>Chat About This Receipt</DialogTitle>
+          <DialogDescription>
+            Merchant: {documentData?.merchant_name || 'N/A'} | Total: $
+            {documentData?.total_amount || '0.00'}
+          </DialogDescription>
+        </DialogHeader>
+
         {/* Chat Message List */}
         <ScrollArea className="flex-1 p-4 mb-4 border rounded-md">
           <div className="space-y-4">
@@ -118,14 +135,14 @@ export function ChatWindow() {
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about your finances..."
+            placeholder="Ask about this receipt..."
             disabled={isLoading}
           />
           <Button type="submit" disabled={isLoading}>
             <Send className="w-4 h-4" />
           </Button>
         </form>
-      </CardContent>
-    </Card>
+      </DialogContent>
+    </Dialog>
   );
 }

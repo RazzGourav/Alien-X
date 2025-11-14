@@ -205,3 +205,19 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+node_modules/
+# Dependencies
+/node_modules
+
+# Next.js (since you're using @next/swc)
+/.next/
+/build/
+/out/
+
+# Other common ignores
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

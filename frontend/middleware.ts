@@ -1,22 +1,23 @@
 // frontend/middleware.ts
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { clerkMiddleware, getAuth } from '@clerk/nextjs/server';
+import type { NextRequest } from 'next/server';
 
-// Define the routes that should be protected
-const isProtectedRoute = createRouteMatcher([
-  '/dashboard(.*)', // Protects all routes starting with /dashboard
-]);
+export default clerkMiddleware((auth, req: NextRequest) => {
+  // --- START DEBUGGING ---
+  console.log(`\n[MIDDLEWARE] Running for: ${req.nextUrl.pathname}`);
+  // --- END DEBUGGING ---
 
-export default clerkMiddleware((auth, req) => {
-  // Check if the route is a protected route
-  if (isProtectedRoute(req)) {
-    //
-    // THE FIX IS HERE:
-    // It's `auth.protect()`, not `auth().protect()`
-    //
-    auth.protect(); // If it is, protect it
+  // Make the homepage (where your sign-in is) public
+  if (req.nextUrl.pathname === "/") {
+    return;
   }
+
+  // If not the homepage, protect the route
+  auth.protect();
 });
 
 export const config = {
+  // This matcher will run the middleware on all routes
+  // including your API routes.
   matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
 };

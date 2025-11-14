@@ -1,14 +1,25 @@
 from google.cloud import documentai_v1 as documentai
 from google.api_core.client_options import ClientOptions
+from google.oauth2 import service_account
+import os
 
-# HARDCODE THESE FOR HACKATHON SPEED (Or use .env)
+# --- CONFIGURATION ---
 PROJECT_ID = "lumenai-478205"
-LOCATION = "us" # or eu
-PROCESSOR_ID = "30fec0bc853f0e63" # Create this in GCP Console -> Document AI
+LOCATION = "us" 
+PROCESSOR_ID = "30fec0bc853f0e63"
+KEY_PATH = "lumenai-478205-a6f308224f9f.json"
 
 def process_document(file_content: bytes, mime_type: str):
+    # Load Credentials
+    credentials = service_account.Credentials.from_service_account_file(KEY_PATH)
+
     opts = ClientOptions(api_endpoint=f"{LOCATION}-documentai.googleapis.com")
-    client = documentai.DocumentProcessorServiceClient(client_options=opts)
+    
+    # Pass credentials to the client
+    client = documentai.DocumentProcessorServiceClient(
+        client_options=opts,
+        credentials=credentials
+    )
     
     name = client.processor_path(PROJECT_ID, LOCATION, PROCESSOR_ID)
     
@@ -18,7 +29,7 @@ def process_document(file_content: bytes, mime_type: str):
     result = client.process_document(request=request)
     document = result.document
 
-    # Extract basic entities (Simplified for MVP)
+    # Extract entities
     data = {
         "total_amount": 0.0,
         "currency": "USD",
@@ -26,13 +37,15 @@ def process_document(file_content: bytes, mime_type: str):
         "date": None
     }
     
-    # Iterate through entities found by the Receipt Processor
     for entity in document.entities:
+        # Normalize text values to avoid extraction errors
+        val = entity.normalized_value.text if entity.normalized_value else entity.mention_text
+
         if entity.type_ == "total_amount":
-            data["total_amount"] = entity.normalized_value.text  # Standardized value
+            data["total_amount"] = val
         if entity.type_ == "supplier_name":
             data["merchant_name"] = entity.mention_text
         if entity.type_ == "receipt_date":
-            data["date"] = entity.normalized_value.text
+            data["date"] = val
 
     return data
