@@ -214,11 +214,11 @@ export default function AiAnalysisPage() {
                       <AlertTriangle className="h-4 w-4" />
                       <AlertTitle>High Fees Detected!</AlertTitle>
                       {/* FIX: Move className here and remove it from ReactMarkdown */}
-                      <AlertDescription className="prose prose-sm dark:prose-invert max-w-none"> 
-                        <ReactMarkdown>
-                          {feeReport}
-                        </ReactMarkdown>
-                      </AlertDescription>
+                      <AlertDescription className="prose prose-sm max-w-none text-foreground"> 
+                    <ReactMarkdown>
+                      {feeReport}
+                    </ReactMarkdown>
+                  </AlertDescription>
                     </Alert>
                   )}
                 </CardContent>

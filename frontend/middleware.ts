@@ -1,23 +1,14 @@
 // frontend/middleware.ts
-import { clerkMiddleware, getAuth } from '@clerk/nextjs/server';
-import type { NextRequest } from 'next/server';
+import { clerkMiddleware } from '@clerk/nextjs/server';
 
-export default clerkMiddleware((auth, req: NextRequest) => {
-  // --- START DEBUGGING ---
-  console.log(`\n[MIDDLEWARE] Running for: ${req.nextUrl.pathname}`);
-  // --- END DEBUGGING ---
-
-  // Make the homepage (where your sign-in is) public
-  if (req.nextUrl.pathname === "/") {
-    return;
-  }
-
-  // If not the homepage, protect the route
-  auth.protect();
+export default clerkMiddleware({
+  // Only the homepage (where the sign-in button is) needs to be public.
+  // All other pages and API routes (/dashboard, /api) require authentication.
+  publicRoutes: ["/"]
 });
 
 export const config = {
-  // This matcher will run the middleware on all routes
-  // including your API routes.
-  matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
+  // This matcher ensures the middleware runs on everything, so Clerk can
+  // attach the user session to the request for the API routes to read.
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };

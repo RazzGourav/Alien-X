@@ -1,4 +1,5 @@
 // frontend/app/page.tsx
+
 import { SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,7 +12,7 @@ import {
   BadgePercent,
   AlertTriangle,
 } from 'lucide-react';
-
+import { ScrollAnimate } from '@/components/ScrollAnimate';
 export default function HomePage() {
   return (
     // Use the dark mode and "tech blue" background you set up
@@ -73,12 +74,13 @@ export default function HomePage() {
 
       {/* --- 3. Problem Section --- */}
       {/* Inspired by "SAY NO TO INTEREST EARNED WITH ASTERISKS" */}
+      <ScrollAnimate>
       <section className="py-24 bg-card">
         <div className="max-w-7xl mx-auto text-center px-6">
           <h2 className="text-4xl md:text-6xl font-black text-primary uppercase">
             SAY NO TO THE
           </h2>
-          <h2 className="text-4xl md:text-6xl font-black text-primary-foreground/70 uppercase">
+          <h2 className="text-4xl md:text-6xl font-black text-primary uppercase">
             FINANCIAL BLIND SPOT.
           </h2>
           
@@ -89,7 +91,7 @@ export default function HomePage() {
                 <CardTitle>Scattered Receipts</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-card-foreground">
                   Forget digging through shoeboxes. We turn your paper and PDFs
                   into pure, queryable data.
                 </p>
@@ -101,7 +103,7 @@ export default function HomePage() {
                 <CardTitle>Hidden Fees</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-card-foreground">
                   {/* Inspired by "confusing fees" */}
                   Your "Fee Hunter" AI reads the fine print on your statements so
                   you don't have to.
@@ -114,7 +116,7 @@ export default function HomePage() {
                 <CardTitle>Manual Spreadsheets</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-card-foreground">
                   Stop wasting hours on data entry. Your AI agent does it for
                   you, instantly.
                 </p>
@@ -123,9 +125,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </ScrollAnimate>
 
       {/* --- 4. Solution Section --- */}
       {/* Inspired by "SAY YES TO INTEREST EARNED AT 100%..." */}
+      <ScrollAnimate delay={0.2}>
       <section className="py-24">
         <div className="max-w-7xl mx-auto text-center px-6">
           <h2 className="text-4xl md:text-6xl font-black text-primary-foreground/70 uppercase">
@@ -187,19 +191,20 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+</ScrollAnimate>
       {/* --- 5. Security Section --- */}
       {/* Inspired by "SECURITY AND EASE CAN COEXIST" */}
+      <ScrollAnimate delay={0.4}>
       <section className="py-24 bg-card">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div>
             <h2 className="text-4xl md:text-6xl font-black text-primary uppercase">
               SECURITY AND EASE
             </h2>
-            <h2 className="text-4xl md:text-6xl font-black text-primary-foreground/70 uppercase">
+            <h2 className="text-4xl md:text-6xl font-black text-card-foreground uppercase">
               CAN COEXIST.
             </h2>
-            <p className="text-lg text-muted-foreground mt-6">
+            <p className="text-lg text-card-foreground mt-6">
               We're built on Google Cloud's secure infrastructure. Your data is
               yours alone—analyzed by AI, but never shared or sold.
             </p>
@@ -209,6 +214,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </ScrollAnimate>
       
       {/* --- 6. Final Footer/CTA --- */}
       <footer className="py-24 text-center">

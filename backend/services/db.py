@@ -4,7 +4,7 @@ from google.oauth2 import service_account
 import datetime
 import os
 import random
-
+from .ai_coach import get_category_ai
 # --- CONFIGURATION ---
 KEY_PATH = "lumenai-478205-a6f308224f9f.json"
 
@@ -21,40 +21,47 @@ bq_client = bigquery.Client(credentials=credentials)
 
 # Correct BigQuery Table Reference (Project.Dataset.Table)
 FULL_TABLE_ID = "lumenai-478205.lumen_financial_data.expenses"
-
 def save_transaction(data: dict, user_id: str):
     print(f"Saving transaction for {user_id}...")
 
+    # 0. DETERMINE CATEGORY (NOW USING GEMINI)
+    merchant = data.get("merchant_name", "Unknown")
+    category = get_category_ai(merchant) # <-- CHANGE IS HERE
+    data["category"] = category
+    
     # 1. Add Metadata
     data["user_id"] = user_id
     data["timestamp"] = datetime.datetime.now().isoformat()
     
     # 2. Save to Firestore (Transaction Doc)
     doc_ref = fs_client.collection("users").document(user_id).collection("transactions").document()
-    doc_ref.set(data)
+    doc_ref.set(data) 
     print(f"Saved to Firestore: {doc_ref.id}")
     
     # 3. Save to BigQuery
     rows_to_insert = [{
         "user_id": user_id,
-        "merchant": data.get("merchant_name", "Unknown"),
+        "merchant": merchant,
         "amount": float(data.get("total_amount", 0)),
         "date": data.get("date", None),
-        "category": "Uncategorized" 
+        "category": category # <-- BigQuery now gets the AI category
     }]
+    
+    # ... (BQ insert and reward simulation logic remains the same) ...
+    
+    # insert_rows_json expects the full table ID here
     errors = bq_client.insert_rows_json(FULL_TABLE_ID, rows_to_insert)
+    
     if errors:
         print(f"BigQuery Errors: {errors}")
 
     # --- START REWARD SIMULATION (FEATURE 2) ---
-    # We simulate a 1-in-5 chance (20%) of getting the "Instant Capture" bonus
     if random.randint(1, 5) == 1:
         print("SIMULATION: User hit the 20% chance for 'Speed Demon'!")
         _add_rewards(user_id, 50, "Speed Demon")
     # --- END REWARD SIMULATION ---
         
     return doc_ref.id
-
 def save_financial_settings(user_id: str, salary: float, limit: float):
     """Saves user's financial settings to Firestore."""
     try:

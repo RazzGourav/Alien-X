@@ -60,7 +60,42 @@ def _get_user_data_from_bq(user_id: str) -> str:
     except Exception as e:
         print(f"BigQuery Fetch Error: {e}")
         return "Error retrieving data."
-
+def get_category_ai(merchant_name: str) -> str:
+    """Uses Gemini to assign a category based on merchant name."""
+    
+    categories = [
+        "Groceries", "Dining", "Shopping", "Subscriptions", 
+        "Utilities", "Transport", "Travel", "Health", "Entertainment", 
+        "Education", "Other", "Uncategorized"
+    ]
+    
+    prompt = f"""
+    You are an expert financial categorizer. 
+    Analyze the merchant name and assign the single best category 
+    from the following list: {', '.join(categories)}.
+    
+    If you cannot determine the category, use 'Uncategorized'.
+    
+    Only output the category name. Do not include any extra text, quotes, or explanations.
+    
+    MERCHANT NAME: "{merchant_name}"
+    CATEGORY:
+    """
+    
+    try:
+        response = model.generate_content(prompt)
+        # Clean up any potential markdown/quotes/newlines from the AI
+        category = response.text.strip().replace('"', '').replace("'", "")
+        
+        # Simple validation
+        if category not in categories:
+             return "Uncategorized"
+        
+        return category
+    
+    except Exception as e:
+        print(f"Gemini Categorization Error: {e}")
+        return "Uncategorized"
 def get_conversational_answer(user_id: str, question: str) -> str:
     spending_data_json = _get_user_data_from_bq(user_id)
     

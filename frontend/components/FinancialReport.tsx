@@ -73,7 +73,7 @@ export function FinancialReport() {
         {report && (
           // 1. MOVE THE `prose` CLASSES TO THIS DIV
           // We also add `max-w-none` to override prose's default width
-          <div className="prose prose-sm dark:prose-invert max-w-none p-4 border rounded-md bg-muted">
+          <div className="p-4 border rounded-md bg-muted text-foreground">
             
             {/* 2. REMOVE THE className PROP FROM ReactMarkdown */}
             <ReactMarkdown>
