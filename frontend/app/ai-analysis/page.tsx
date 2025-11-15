@@ -2,11 +2,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
+import { Sidebar } from '@/components/Sidebar';
 import { UserButton } from '@clerk/nextjs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, TrendingUp, AlertTriangle, FileCheck2 } from 'lucide-react';
+import { Loader2, TrendingUp, AlertTriangle, FileCheck2, BarChart3, PieChart } from 'lucide-react';
 import { toast } from 'sonner';
+import { StatsCard } from '@/components/StatsCard';
+import { StatusBadge } from '@/components/StatusBadge';
 
 // Chart components
 import { CategoryPieChart } from '@/components/CategoryPieChart';
@@ -104,17 +106,21 @@ export default function AiAnalysisPage() {
 
   if (isLoading) {
     return (
-      <div className="p-8 max-w-7xl mx-auto">
-        <header className="flex justify-between items-center mb-4">
-          <h1 className="text-3xl font-bold">AI Analysis</h1>
-          <UserButton afterSignOutUrl="/" />
-        </header>
-        <div className="mb-8">
-          <Header />
-        </div>
-        <div className="flex justify-center items-center h-96">
-          <Loader2 className="w-12 h-12 animate-spin" />
-          <p className="ml-4 text-lg">Your AI coach is analyzing your data...</p>
+      <div className="flex h-screen">
+        <Sidebar />
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-40">
+            <div className="px-6 py-4 flex justify-between items-center">
+              <h1 className="text-2xl font-bold tracking-tight">AI Analysis</h1>
+              <UserButton afterSignOutUrl="/" />
+            </div>
+          </header>
+          <div className="flex-1 flex justify-center items-center">
+            <div className="flex flex-col items-center">
+              <Loader2 className="w-12 h-12 animate-spin text-primary" />
+              <p className="ml-4 text-lg mt-4">Your AI coach is analyzing your data...</p>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -122,15 +128,19 @@ export default function AiAnalysisPage() {
 
   if (!data) {
     return (
-      <div className="p-8 max-w-7xl mx-auto">
-        <header className="flex justify-between items-center mb-4">
-          <h1 className="text-3xl font-bold">AI Analysis</h1>
-          <UserButton afterSignOutUrl="/" />
-        </header>
-        <div className="mb-8">
-          <Header />
+      <div className="flex h-screen">
+        <Sidebar />
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-40">
+            <div className="px-6 py-4 flex justify-between items-center">
+              <h1 className="text-2xl font-bold tracking-tight">AI Analysis</h1>
+              <UserButton afterSignOutUrl="/" />
+            </div>
+          </header>
+          <div className="flex-1 p-6">
+            <p className="text-muted-foreground">Could not load analysis data. Please try again later.</p>
+          </div>
         </div>
-        <p>Could not load analysis data. Please try again later.</p>
       </div>
     );
   }
@@ -143,21 +153,22 @@ export default function AiAnalysisPage() {
   };
 
   return (
-    <div className="p-8 max-w-7xl mx-auto">
-      <header className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold tracking-tight">AI Analysis</h1>
-        <p className="text-muted-foreground">
-          Let your AI coach find insights in your data.
-        </p>
-      </header>
-      <UserButton afterSignOutUrl="/" /> 
-      
-      <div className="mb-8">
-        <Header />
-      </div>
+    <div className="flex h-screen">
+      <Sidebar />
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-40">
+          <div className="px-6 py-4 flex justify-between items-center">
+            <div>
+              <h1 className="text-2xl font-bold tracking-tight">AI Analysis</h1>
+              <p className="text-sm text-muted-foreground mt-1">Let your AI coach find insights in your data.</p>
+            </div>
+            <UserButton afterSignOutUrl="/" />
+          </div>
+        </header>
 
-      {/* --- NEW TAB-BASED LAYOUT --- */}
-      <Tabs defaultValue="charts" className="w-full">
+        <div className="flex-1 overflow-y-auto">
+          <div className="p-6 max-w-7xl mx-auto">
+            <Tabs defaultValue="charts" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="charts">Expenditure Charts</TabsTrigger>
           <TabsTrigger value="audits">AI Audits & Insights</TabsTrigger>
@@ -166,16 +177,72 @@ export default function AiAnalysisPage() {
         {/* === TAB 1: ALL THE CHARTS === */}
         <TabsContent value="charts" className="mt-6">
           <main className="space-y-8">
+            {/* Summary Stats */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Quick Summary</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <StatsCard
+                  title="Monthly Salary"
+                  value={`$${data.summary_stats.salary.toFixed(2)}`}
+                  icon={TrendingUp}
+                />
+                <StatsCard
+                  title="Spending Limit"
+                  value={`$${data.summary_stats.limit.toFixed(2)}`}
+                  icon={AlertTriangle}
+                />
+                <StatsCard
+                  title="Total Spent"
+                  value={`$${data.summary_stats.total_spent_this_month.toFixed(2)}`}
+                  icon={BarChart3}
+                  trend={{ value: (data.summary_stats.total_spent_this_month / data.summary_stats.limit) * 100, direction: 'up' }}
+                />
+              </div>
+            </section>
+
+            {/* Charts Section */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Financial Overview</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <CategoryPieChart data={data.spending_by_category} />
-                <SummaryBarChart data={summaryChartData} />
+                <Card className="card-enhanced">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <PieChart className="w-5 h-5 text-primary" />
+                      Spending by Category
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CategoryPieChart data={data.spending_by_category} />
+                  </CardContent>
+                </Card>
+                <Card className="card-enhanced">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <BarChart3 className="w-5 h-5 text-primary" />
+                      Budget Summary
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <SummaryBarChart data={summaryChartData} />
+                  </CardContent>
+                </Card>
               </div>
             </section>
+
+            {/* Spending Over Time */}
             <section>
-              <h2 className="text-2xl font-semibold mb-4">Spending Over Time</h2>
-              <SpendingLineChart data={data.spending_over_time} />
+              <Card className="card-enhanced">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <TrendingUp className="w-5 h-5 text-primary" />
+                    Spending Over Time
+                  </CardTitle>
+                  <CardDescription>Track your spending trends</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <SpendingLineChart data={data.spending_over_time} />
+                </CardContent>
+              </Card>
             </section>
           </main>
         </TabsContent>
@@ -229,54 +296,66 @@ export default function AiAnalysisPage() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">AI-Driven Insights</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card>
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">
+                <Card className="card-enhanced">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <TrendingUp className="h-5 w-5 text-primary" />
                       Top Spending Category
                     </CardTitle>
-                    <TrendingUp className="h-4 w-4 text-muted-foreground" />
                   </CardHeader>
                   <CardContent>
                     {data.ai_insights.top_category ? (
-                      <>
-                        <div className="text-2xl font-bold">
-                          {data.ai_insights.top_category.name}
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-muted-foreground">Category</span>
+                          <StatusBadge status="info" label={data.ai_insights.top_category.name} />
                         </div>
-                        <p className="text-xs text-muted-foreground">
-                          You spent $
-                          {data.ai_insights.top_category.value.toFixed(2)} in
-                          this category.
-                        </p>
-                      </>
+                        <div>
+                          <p className="text-3xl font-bold text-primary">
+                            ${data.ai_insights.top_category.value.toFixed(2)}
+                          </p>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            Your highest spending category this month
+                          </p>
+                        </div>
+                      </div>
                     ) : (
-                      <p>No spending data available.</p>
+                      <p className="text-muted-foreground">No spending data available.</p>
                     )}
                   </CardContent>
                 </Card>
-                <Card>
-                  <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">
-                      Actionable Nudge
+                <Card className="card-enhanced">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <AlertTriangle className="h-5 w-5 text-destructive" />
+                      Uncategorized Spending
                     </CardTitle>
-                    <AlertTriangle className="h-4 w-4 text-destructive" />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold">
-                      ${data.ai_insights.uncategorized_spend.toFixed(2)}
+                    <div className="space-y-3">
+                      <div>
+                        <p className="text-3xl font-bold text-destructive">
+                          ${data.ai_insights.uncategorized_spend.toFixed(2)}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Needs categorization for better insights
+                        </p>
+                      </div>
+                      <Button size="sm" variant="outline" className="w-full">
+                        Categorize Now
+                      </Button>
                     </div>
-                    <p className="text-xs text-muted-foreground">
-                      ...spent on 'Uncategorized' items. Go to the Expenses
-                      page to categorize them!
-                    </p>
                   </CardContent>
                 </Card>
               </div>
             </section>
             
-          </main>
-        </TabsContent>
-      </Tabs>
-      
+            </main>
+            </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

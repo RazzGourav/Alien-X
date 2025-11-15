@@ -79,37 +79,81 @@
 }
 
 .dark {
-  --background: oklch(0.298 0.04 150); /* #344e41 */
-  --foreground: oklch(0.853 0.02 100); /* #dad7cd */
-  --card: oklch(1 0 0);                   /* PURE WHITE */
-  --card-foreground: oklch(0.145 0 0);     /* DARK GRAY/BLACK TEXT */
-  --popover: oklch(0.298 0.04 150); /* #344e41 */
-  --popover-foreground: oklch(0.853 0.02 100); /* #dad7cd */
-  --primary: oklch(0.484 0.08 145); /* #588157 */
-  --primary-foreground: oklch(0.853 0.02 100); /* #dad7cd */
-  --secondary: oklch(0.702 0.07 130); /* #a3b18a */
-  --secondary-foreground: oklch(0.298 0.04 150); /* #344e41 */
-  --muted: oklch(0.348 0.06 150); /* #3a5a40 */
-  --muted-foreground: oklch(0.702 0.07 130); /* #a3b18a */
-  --accent: oklch(0.702 0.07 130); /* #a3b18a */
-  --accent-foreground: oklch(0.298 0.04 150); /* #344e41 */
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(0.348 0.06 150); /* #3a5a40 */
-  --input: oklch(0.348 0.06 150); /* #3a5a40 */
-  --ring: oklch(0.702 0.07 130); /* #a3b18a */
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.298 0.04 150); /* #344e41 */
-  --sidebar-foreground: oklch(0.853 0.02 100); /* #dad7cd */
-  --sidebar-primary: oklch(0.484 0.08 145); /* #588157 */
-  --sidebar-primary-foreground: oklch(0.853 0.02 100); /* #dad7cd */
-  --sidebar-accent: oklch(0.348 0.06 150); /* #3a5a40 */
-  --sidebar-accent-foreground: oklch(0.853 0.02 100); /* #dad7cd */
-  --sidebar-border: oklch(0.348 0.06 150); /* #3a5a40 */
-  --sidebar-ring: oklch(0.702 0.07 130); /* #a3b18a */
+  /* Base colors */
+  --background: #0F172A; /* Dark blue background */
+  --foreground: #F1F5F9; /* Light gray text */
+  --card: #1E293B; /* Slightly lighter blue for cards */
+  --card-foreground: #F1F5F9;
+  --popover: #1E293B;
+  --popover-foreground: #F1F5F9;
+  
+  /* Primary - Vibrant Purple */
+  --primary: #8B5CF6;
+  --primary-foreground: #FFFFFF;
+  
+  /* Secondary - Bright Green */
+  --secondary: #22C55E;
+  --secondary-foreground: #0F172A;
+  
+  /* Muted and Accent */
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --accent: #4F46E5; /* Indigo accent */
+  --accent-foreground: #FFFFFF;
+  
+  /* Status colors */
+  --destructive: #EF4444;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  
+  /* UI Elements */
+  --border: rgba(255, 255, 255, 0.1);
+  --input: #334155;
+  --ring: rgba(139, 92, 246, 0.5);
+  
+  /* Chart colors */
+  --chart-1: #8B5CF6; /* Purple */
+  --chart-2: #22C55E; /* Green */
+  --chart-3: #3B82F6; /* Blue */
+  --chart-4: #F59E0B; /* Amber */
+  --chart-5: #EC4899; /* Pink */
+  
+  /* Sidebar */
+  --sidebar: #0F172A;
+  --sidebar-foreground: #F1F5F9;
+  --sidebar-primary: #8B5CF6;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #22C55E;
+  --sidebar-accent-foreground: #0F172A;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(139, 92, 246, 0.5);
+  
+  /* Custom glow effects */
+  --glow-primary: 0 0 20px rgba(139, 92, 246, 0.5);
+  --glow-secondary: 0 0 20px rgba(34, 197, 94, 0.5);
+  
+  /* Card specific styles */
+  .card {
+    background: linear-gradient(145deg, #1E293B, #0F172A);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background: linear-gradient(45deg, #8B5CF6, #7C3AED);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  }
+  
+  .btn-secondary {
+    background: linear-gradient(45deg, #22C55E, #16A34A);
+    color: #0F172A;
+    border: none;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+  }
 }
 
 @layer base {
@@ -119,37 +163,45 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Smooth scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.3);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.5);
+  }
 }
 
-/* Add this block to the very bottom of frontend/app/globals.css */
-
-/* This targets the base Card component and applies the glow */
-.dark .card {
-    /* Added a subtle white/light layer (oklch(1 0 0) is pure white) */
-    box-shadow: 
-        0 0 10px rgba(0, 0, 0, 0.5), 
-        0 0 10px 0px oklch(1 0 0 / 0.2), /* <--- THIS IS THE NEW WHITE GLOW */
-        0 0 20px 1px oklch(from var(--primary) h c l / 0.5); /* The existing green glow */
-    
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.dark .card:hover {
-    /* Also update the hover state for consistency */
-    box-shadow: 
-        0 0 12px rgba(0, 0, 0, 0.6),
-        0 0 15px 3px oklch(1 0 0 / 0.3), /* The new light hover glow */
-        0 0 25px 3px oklch(from var(--primary) h c l / 0.8);
-}
-
-/* Optional: Subtle lift and glow on hover */
-.dark .card:hover {
-    box-shadow: 
-        0 0 12px rgba(0, 0, 0, 0.6),
-        0 0 25px 3px oklch(from var(--primary) h c l / 0.8);
-}
-.nav-bg-darker {
-    /* Set the lightness component (L) lower than the main body (0.298) */
-    background-color: oklch(0.26 0.04 150); 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Add a subtle drop shadow */
+@layer components {
+  /* Enhanced card with gradient and glow */
+  .card-enhanced {
+    @apply bg-gradient-to-br from-card to-card/80 border border-primary/10 rounded-lg shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300;
+  }
+  
+  /* Navigation background */
+  .nav-bg-darker {
+    @apply bg-background/50 backdrop-blur-md;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
 }

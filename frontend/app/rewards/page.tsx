@@ -2,14 +2,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
+import { Sidebar } from '@/components/Sidebar';
 import { UserButton } from '@clerk/nextjs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Loader2, Award, Star, Zap, DollarSign } from 'lucide-react'; // Added DollarSign
+import { Loader2, Award, Star, Zap, DollarSign, TrendingUp, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
-import { ScrollArea } from '@/components/ui/scroll-area'; // Added ScrollArea
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { StatsCard } from '@/components/StatsCard';
+import { StatusBadge } from '@/components/StatusBadge';
 
 interface RewardData {
   points: number;
@@ -105,16 +107,19 @@ export default function RewardsPage() {
   };
 
   if (isLoading) {
-    // ... (Loading state) ...
     return (
-      <div className="p-8 max-w-7xl mx-auto">
-        <header className="flex justify-between items-center mb-4">
-          <h1 className="text-3xl font-bold">Rewards</h1>
-          <UserButton afterSignOutUrl="/" />
-        </header>
-        <div className="mb-8"><Header /></div>
-        <div className="flex justify-center items-center h-64">
-          <Loader2 className="w-8 h-8 animate-spin" />
+      <div className="flex h-screen">
+        <Sidebar />
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-40">
+            <div className="px-6 py-4 flex justify-between items-center">
+              <h1 className="text-2xl font-bold tracking-tight">Rewards</h1>
+              <UserButton afterSignOutUrl="/" />
+            </div>
+          </header>
+          <div className="flex-1 flex justify-center items-center">
+            <Loader2 className="w-8 h-8 animate-spin text-primary" />
+          </div>
         </div>
       </div>
     );
@@ -124,70 +129,73 @@ export default function RewardsPage() {
   const isRedeemable = data.points >= 1000;
   
   return (
-    <div className="p-8 max-w-7xl mx-auto">
-      <header className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold tracking-tight">Rewards Vault</h1>
-        <UserButton afterSignOutUrl="/" />
-      </header>
+    <div className="flex h-screen">
+      <Sidebar />
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-40">
+          <div className="px-6 py-4 flex justify-between items-center">
+            <h1 className="text-2xl font-bold tracking-tight">Rewards Vault</h1>
+            <UserButton afterSignOutUrl="/" />
+          </div>
+        </header>
 
-      <div className="mb-8">
-        <Header />
-      </div>
-
-      <main className="space-y-10">
+        <div className="flex-1 overflow-y-auto">
+          <div className="p-6 max-w-7xl mx-auto">
+            <main className="space-y-10">
         
-        {/* --- SECTION 1: THE VAULT (High Contrast Focus) --- */}
-        <Card className="bg-primary border-4 border-ring/50 shadow-xl">
-          <CardContent className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 items-center">
-              
-              {/* Total Points */}
-              <div className="text-center md:text-left space-y-2 text-primary-foreground">
-                <CardDescription className="text-primary-foreground/80 text-lg uppercase">
-                  Current Points Balance
-                </CardDescription>
-                <p className="text-6xl font-black">{data.points}</p>
-                <p className="text-sm text-primary-foreground/70">100 Points = $1.00</p>
-              </div>
-
-              {/* Redeemable Cash Value */}
-              <div className="text-center space-y-2 text-primary-foreground mt-6 md:mt-0">
-                <p className="text-lg text-primary-foreground/80 uppercase">
-                  Redeemable Value
-                </p>
-                <p className="text-5xl font-extrabold">
-                  ${redeemableDollars.toFixed(2)}
-                </p>
-              </div>
-
-              {/* Redeem Button (The Action) */}
-              <div className="mt-8 md:mt-0 flex flex-col items-center">
-                <Button
-                  size="lg"
-                  className={`w-full max-w-[200px] text-lg font-bold ${
-                    isRedeemable ? 'bg-white text-primary hover:bg-gray-100' : 'bg-secondary/50 text-secondary-foreground cursor-not-allowed'
-                  }`}
-                  onClick={handleRedeemPoints}
-                  disabled={isRedeeming || !isRedeemable}
-                >
-                  {isRedeeming ? (
-                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  ) : (
-                    <>
-                      <DollarSign className="mr-2 h-5 w-5" />
-                      {isRedeemable ? "Redeem $10" : "Need 1000 Pts"}
-                    </>
-                  )}
-                </Button>
-                {!isRedeemable && (
-                    <p className="text-xs text-primary-foreground/70 mt-2">
-                        {1000 - data.points} points needed for $10 payout.
-                    </p>
-                )}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        {/* --- SECTION 1: POINTS OVERVIEW --- */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Points Overview</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <StatsCard
+              title="Total Points"
+              value={data.points}
+              icon={Sparkles}
+              description="Available to redeem"
+              trend={{ value: Math.min(100, (data.points / 1000) * 100), direction: 'up' }}
+            />
+            <StatsCard
+              title="Redeemable Value"
+              value={`$${redeemableDollars.toFixed(2)}`}
+              icon={DollarSign}
+              description="100 points = $1.00"
+            />
+            <Card className="card-enhanced">
+              <CardHeader>
+                <CardTitle className="text-sm">Redemption Status</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground">Progress</span>
+                    <span className="text-sm font-semibold">{Math.min(100, (data.points / 1000) * 100).toFixed(0)}%</span>
+                  </div>
+                  <div className="w-full bg-muted rounded-full h-2">
+                    <div
+                      className="h-2 rounded-full bg-gradient-to-r from-primary to-secondary transition-all"
+                      style={{ width: `${Math.min(100, (data.points / 1000) * 100)}%` }}
+                    />
+                  </div>
+                  <Button
+                    size="sm"
+                    className="w-full"
+                    onClick={handleRedeemPoints}
+                    disabled={isRedeeming || !isRedeemable}
+                  >
+                    {isRedeeming ? (
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    ) : (
+                      <>
+                        <DollarSign className="mr-2 h-4 w-4" />
+                        {isRedeemable ? "Redeem $10" : `Need ${1000 - data.points} pts`}
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
 
         {/* --- SECTION 2: Active Challenges (Simplified Grid) --- */}
         <section>
@@ -195,14 +203,20 @@ export default function RewardsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
             {/* Budget Sniper Card */}
-            <Card>
+            <Card className="card-enhanced border-l-4 border-l-primary">
               <CardHeader>
-                <CardTitle className="text-lg">Budget Sniper Challenge</CardTitle>
+                <CardTitle className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-primary" />
+                  Budget Sniper Challenge
+                </CardTitle>
                 <CardDescription>
                   Earn points for every $1 you save under your limit.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
+                <div className="bg-primary/10 rounded-lg p-3">
+                  <p className="text-sm font-semibold text-primary">10 points per $1 saved</p>
+                </div>
                 <Button onClick={handleCalculateSniper} disabled={isCalculating} className="w-full">
                   {isCalculating && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   Calculate Last Month's Reward
@@ -211,47 +225,77 @@ export default function RewardsPage() {
             </Card>
 
             {/* Instant Capture Card */}
-            <Card>
+            <Card className="card-enhanced border-l-4 border-l-secondary">
               <CardHeader>
-                <CardTitle className="text-lg">Instant Capture Bonus</CardTitle>
+                <CardTitle className="flex items-center gap-2">
+                  <Zap className="w-5 h-5 text-secondary" />
+                  Instant Capture Bonus
+                </CardTitle>
                 <CardDescription>
-                  Reward is applied automatically and randomly at upload (for demo).
+                  Reward is applied automatically and randomly at upload.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
+                <div className="bg-secondary/10 rounded-lg p-3">
+                  <p className="text-sm font-semibold text-secondary">50 points + Speed Demon badge</p>
+                </div>
                 <p className="text-sm text-muted-foreground">
-                  Keep uploading receipts quickly to maximize your "Speed Demon" bonus chance.
+                  Keep uploading receipts quickly to maximize your bonus chance.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Badges Gallery (Replaces the third column) */}
-            <Card className="lg:col-span-1">
+            {/* Badges Gallery */}
+            <Card className="card-enhanced border-l-4 border-l-accent">
                 <CardHeader>
-                    <CardTitle className="text-lg">Your Badges ({data.badges.length})</CardTitle>
+                    <CardTitle className="flex items-center gap-2">
+                      <Star className="w-5 h-5 text-accent" />
+                      Your Badges ({data.badges.length})
+                    </CardTitle>
                     <CardDescription>Your collection of achievements.</CardDescription>
                 </CardHeader>
-                <ScrollArea className="h-[120px] p-3">
-                    <div className="flex flex-wrap gap-2">
-                      {data.badges.length > 0 ? (
-                        data.badges.map((badge) => (
-                          <Badge key={badge} variant="default" className="text-sm p-2 whitespace-nowrap">
+                <CardContent>
+                  {data.badges.length > 0 ? (
+                    <ScrollArea className="h-[150px] pr-4">
+                      <div className="flex flex-wrap gap-2">
+                        {data.badges.map((badge) => (
+                          <Badge key={badge} variant="default" className="text-sm p-2 whitespace-nowrap bg-accent/20 text-accent border-accent/50">
                             {getBadgeIcon(badge)}
                             {badge}
                           </Badge>
-                        ))
-                      ) : (
-                        <p className="text-sm text-muted-foreground">
-                          Start logging expenses to earn badges!
-                        </p>
-                      )}
+                        ))}
+                      </div>
+                    </ScrollArea>
+                  ) : (
+                    <div className="text-center py-8">
+                      <Star className="w-8 h-8 text-muted-foreground/50 mx-auto mb-2" />
+                      <p className="text-sm text-muted-foreground">
+                        Start logging expenses to earn badges!
+                      </p>
                     </div>
-                </ScrollArea>
+                  )}
+                </CardContent>
+            </Card>
+
+            {/* New Card for Redeem History */}
+            <Card className="lg:col-span-1">
+                <CardHeader>
+                    <CardTitle className="text-lg">Redemption History</CardTitle>
+                    <CardDescription>Track your past redemptions.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                        Coming soon...
+                    </p>
+                </CardContent>
             </Card>
 
           </div>
         </section>
-      </main>
+            </main>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,47 +5,17 @@ import { useState, useEffect, useMemo } from 'react';
 import { Sidebar } from '@/components/Sidebar';
 import { UserButton } from '@clerk/nextjs';
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
-import { Loader2, Settings } from 'lucide-react';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-  SheetFooter,
-  SheetClose
-} from "@/components/ui/sheet";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Loader2, Settings, TrendingDown, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger, SheetFooter, SheetClose } from "@/components/ui/sheet";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { StatsCard } from '@/components/StatsCard';
+import { StatusBadge } from '@/components/StatusBadge';
 
 interface SettingsData {
   salary: number;
@@ -64,7 +34,6 @@ export default function ExpensesPage() {
   const [allExpenses, setAllExpenses] = useState<Expense[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-
   const [salaryForm, setSalaryForm] = useState('');
   const [limitForm, setLimitForm] = useState('');
 
@@ -73,9 +42,7 @@ export default function ExpensesPage() {
       setIsLoading(true);
       try {
         const response = await fetch('/api/expense-data');
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
+        if (!response.ok) throw new Error('Failed to fetch data');
         const data = await response.json();
         setSettings(data.settings || { salary: 0, limit: 0 });
         setAllExpenses(data.expenses || []);
@@ -87,14 +54,12 @@ export default function ExpensesPage() {
         setIsLoading(false);
       }
     };
-
     fetchData();
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
-    
     const numSalary = parseFloat(salaryForm);
     const numLimit = parseFloat(limitForm);
 
@@ -104,10 +69,7 @@ export default function ExpensesPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ salary: numSalary, limit: numLimit }),
       });
-      if (!response.ok) {
-        throw new Error('Failed to save settings');
-      }
-      
+      if (!response.ok) throw new Error('Failed to save settings');
       setSettings({ salary: numSalary, limit: numLimit });
       toast.success('Settings updated!');
     } catch (error) {
@@ -118,22 +80,15 @@ export default function ExpensesPage() {
   };
 
   const formatMonthYear = (date: Date) => {
-    return date.toLocaleString('default', {
-      month: 'long',
-      year: 'numeric',
-    });
+    return date.toLocaleString('default', { month: 'long', year: 'numeric' });
   };
 
   const currentMonthYear = formatMonthYear(new Date());
-
   const expensesByMonth = useMemo(() => {
     return allExpenses.reduce((acc, expense) => {
       const date = new Date(expense.date);
       const monthYear = formatMonthYear(date);
-      
-      if (!acc[monthYear]) {
-        acc[monthYear] = [];
-      }
+      if (!acc[monthYear]) acc[monthYear] = [];
       acc[monthYear].push(expense);
       return acc;
     }, {} as Record<string, Expense[]>);
@@ -143,13 +98,14 @@ export default function ExpensesPage() {
   const totalSpentThisMonth = thisMonthExpenses.reduce((sum, exp) => sum + (exp.amount || 0), 0);
   const remainingLimit = settings.limit - totalSpentThisMonth;
   const savings = settings.salary - totalSpentThisMonth;
+  const spendingPercentage = settings.limit > 0 ? (totalSpentThisMonth / settings.limit) * 100 : 0;
   
   const sortedHistoryKeys = Object.keys(expensesByMonth)
     .filter(monthYear => monthYear !== currentMonthYear)
     .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
   const TransactionTable = ({ expenses }: { expenses: Expense[] }) => (
-    <Card>
+    <Card className="card-enhanced">
       <Table>
         <TableHeader>
           <TableRow>
@@ -165,13 +121,15 @@ export default function ExpensesPage() {
               <TableRow key={idx}>
                 <TableCell className="font-medium">{expense.merchant}</TableCell>
                 <TableCell>{new Date(expense.date).toLocaleDateString()}</TableCell>
-                <TableCell>{expense.category}</TableCell>
-                <TableCell className="text-right">${expense.amount.toFixed(2)}</TableCell>
+                <TableCell>
+                  <StatusBadge status="info" label={expense.category} />
+                </TableCell>
+                <TableCell className="text-right font-semibold">${expense.amount.toFixed(2)}</TableCell>
               </TableRow>
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={4} className="text-center text-muted-foreground">
+              <TableCell colSpan={4} className="text-center text-muted-foreground py-8">
                 No transactions for this period.
               </TableCell>
             </TableRow>
@@ -183,30 +141,25 @@ export default function ExpensesPage() {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <Sidebar />
-
-      {/* Main Content Area */}
       <div className="flex-1 flex flex-col overflow-hidden">
-        {/* Top Header Bar */}
         <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40">
           <div className="px-6 py-4 flex justify-between items-center">
             <div>
               <h1 className="text-2xl font-bold tracking-tight">Expenses</h1>
-              <p className="text-sm text-muted-foreground mt-1">Review your spending and manage settings.</p>
+              <p className="text-sm text-muted-foreground mt-1">Track and manage your spending</p>
             </div>
             <UserButton afterSignOutUrl="/" />
           </div>
         </header>
 
-        {/* Scrollable Content Area */}
         <div className="flex-1 overflow-y-auto">
           <div className="p-6 max-w-7xl mx-auto">
             {/* Settings Button */}
             <div className="mb-6 flex justify-end">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon">
+                  <Button variant="outline" size="icon" className="hover:bg-primary/10">
                     <Settings className="h-4 w-4" />
                   </Button>
                 </SheetTrigger>
@@ -255,42 +208,45 @@ export default function ExpensesPage() {
 
             {isLoading ? (
               <div className="flex justify-center items-center h-64">
-                <Loader2 className="w-8 h-8 animate-spin" />
+                <Loader2 className="w-8 h-8 animate-spin text-primary" />
               </div>
             ) : (
               <main className="space-y-8">
-                {/* Summary Cards */}
+                {/* Summary Stats */}
                 <section>
                   <h2 className="text-2xl font-semibold mb-4">This Month's Summary</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <StatsCard
+                      title="Total Spent"
+                      value={`$${totalSpentThisMonth.toFixed(2)}`}
+                      icon={TrendingDown}
+                      trend={{ value: spendingPercentage, direction: spendingPercentage > 50 ? 'up' : 'down' }}
+                    />
+                    <StatsCard
+                      title="Limit Remaining"
+                      value={`$${remainingLimit.toFixed(2)}`}
+                      icon={AlertCircle}
+                      trend={{ value: Math.max(0, remainingLimit), direction: remainingLimit > 0 ? 'up' : 'down' }}
+                    />
+                    <StatsCard
+                      title="Est. Savings"
+                      value={`$${savings.toFixed(2)}`}
+                      icon={CheckCircle2}
+                    />
                     <Card className="card-enhanced">
                       <CardHeader>
-                        <CardTitle>Total Spent</CardTitle>
+                        <CardTitle className="text-sm">Spending %</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-3xl font-bold text-primary">
-                          ${totalSpentThisMonth.toFixed(2)}
-                        </p>
-                      </CardContent>
-                    </Card>
-                    <Card className="card-enhanced">
-                      <CardHeader>
-                        <CardTitle>Limit Remaining</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className={`text-3xl font-bold ${remainingLimit < 0 ? 'text-destructive' : 'text-green-500'}`}>
-                          ${remainingLimit.toFixed(2)}
-                        </p>
-                      </CardContent>
-                    </Card>
-                    <Card className="card-enhanced">
-                      <CardHeader>
-                        <CardTitle>Est. Savings</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-3xl font-bold text-secondary">
-                          ${savings.toFixed(2)}
-                        </p>
+                        <div className="text-3xl font-bold text-primary">{spendingPercentage.toFixed(0)}%</div>
+                        <div className="w-full bg-muted rounded-full h-2 mt-2">
+                          <div
+                            className={`h-2 rounded-full transition-all ${
+                              spendingPercentage > 80 ? 'bg-destructive' : spendingPercentage > 50 ? 'bg-yellow-500' : 'bg-green-500'
+                            }`}
+                            style={{ width: `${Math.min(spendingPercentage, 100)}%` }}
+                          />
+                        </div>
                       </CardContent>
                     </Card>
                   </div>
@@ -314,7 +270,9 @@ export default function ExpensesPage() {
                         <Accordion type="single" collapsible className="w-full">
                           {sortedHistoryKeys.map((monthYear) => (
                             <AccordionItem value={monthYear} key={monthYear}>
-                              <AccordionTrigger>{monthYear}</AccordionTrigger>
+                              <AccordionTrigger className="hover:bg-primary/5 px-4 rounded">
+                                {monthYear}
+                              </AccordionTrigger>
                               <AccordionContent>
                                 <TransactionTable expenses={expensesByMonth[monthYear]} />
                               </AccordionContent>

@@ -75,16 +75,26 @@ export function ChatWindow() {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>Chat with LUMEN-Agent</CardTitle>
-        <CardDescription>
-          Ask questions about your spending, like "How much did I spend at
-          Starbucks?"
-        </CardDescription>
+        <CardTitle>LUMEN-Agent</CardTitle>
+        
       </CardHeader>
       <CardContent className="flex flex-col h-[400px]">
         {/* Chat Message List */}
         <ScrollArea className="flex-1 p-4 mb-4 border rounded-md">
           <div className="space-y-4">
+            {messages.length === 0 && (
+              <div className="h-full flex items-center justify-center">
+                <div className="text-center text-muted-foreground space-y-3">
+                  <p className="font-medium">Need help with your finances? Try asking:</p>
+                  <div className="grid gap-2 text-sm">
+                    <p>"How much did I spend at Starbucks?"</p>
+                    <p>"What were my top expenses this month?"</p>
+                    <p>"Show me my spending by category"</p>
+                    <p>"What's my total spending for this week?"</p>
+                  </div>
+                </div>
+              </div>
+            )}
             {messages.map((msg, index) => (
               <div
                 key={index}
