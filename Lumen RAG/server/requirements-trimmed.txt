@@ -1,0 +1,52 @@
+# Trimmed, pinned requirements intended to be compatible with Python 3.12 (minimal runtime for the server)
+# Adjust versions if you need additional features; this list focuses on packages main.py uses plus common infra.
+
+# Core web server
+Flask==3.1.3
+flask-cors==5.0.1
+python-dotenv==1.1.0
+
+# HTTP / async
+requests==2.32.3
+httpx==0.28.1
+aiohttp==3.11.18
+
+# Data & numeric
+numpy==2.2.5
+pandas==2.2.3
+pyarrow==19.0.1
+
+# NLP & embeddings
+spacy==3.8.5
+# install model separately: python -m spacy download en_core_web_md
+
+# Vector DB / KG
+pinecone==6.0.2
+neo4j==5.28.1
+
+# Cloud / LLM clients
+openai==1.75.0
+google-genai==1.11.0
+vertexai==1.71.1
+
+# File processing & utilities
+pillow==11.2.1
+pdfminer.six==20250416
+python-multipart==0.0.20
+
+# Misc helpers
+tqdm==4.67.1
+python-dateutil==2.9.0.post0
+python-magic==0.4.27
+
+# Dev / test (optional)
+pytest==8.3.5
+
+# Ensure modern build tools in isolated builds
+setuptools>=79.0.0
+wheel>=0.40.0
+pip>=23.3
+langgraph==0.0.30
+langchain==0.3.23
+unstructured==0.17.2
+langchain-google-genai

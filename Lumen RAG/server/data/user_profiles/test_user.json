@@ -1,0 +1,15 @@
+{
+  "user_id": "test_user",
+  "risk_tolerance": "moderate",
+  "financial_goals": [
+    "retirement",
+    "investment"
+  ],
+  "investment_horizon": "long-term",
+  "preferences": {
+    "sustainability": 0.5,
+    "technology": 0.5,
+    "healthcare": 0.5
+  },
+  "interaction_history": []
+}

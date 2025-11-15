@@ -1,0 +1,187 @@
+{
+  "detailed_results": [
+    {
+      "query": "What investment strategies should I consider based on my risk profile?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "How should I allocate my retirement portfolio?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "What are the tax implications of selling my stock investments?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "Should I pay off my mortgage early or invest that money?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "What's the difference between stocks and bonds?",
+      "response": "Okay, let\u2019s address your question about the difference between stocks and bonds.\n\nBased on your profile \u2013 a neutral risk tolerance, long-term investment horizon, and preferences for sustainability, technology, and healthcare \u2013 understanding the distinctions between stocks and bonds is crucial for building a diversified portfolio.\n\nHere\u2019s a breakdown:\n\n**Stocks (Equities):**  Think of stocks as representing ownership in a company. When you buy a stock, you\u2019re buying a small piece of that company.  Stock prices can fluctuate significantly based on the company\u2019s performance, market conditions, and investor sentiment. Because of this volatility, stocks generally offer the potential for higher returns over the long term, aligning with your long-term investment goals. However, they also carry a higher risk of loss compared to bonds.  The context you provided mentions a company with a high P/E ratio, which suggests investors might be anticipating significant growth \u2013 a characteristic often associated with stocks.\n\n**Bonds (Fixed Income):** Bonds are essentially loans you make to a company or government. In return, they promise to pay you interest over a set period and return the principal amount at maturity. Bonds are generally considered less risky than stocks because they offer a more predictable income stream. They tend to be more stable during economic downturns.\n\n**Considering Your Preferences:** Given your interest in sustainability, technology, and healthcare, you might consider including some bonds in your portfolio to provide stability and potentially align with socially responsible investing options (green bonds, for example).\n\n**Important Note:** The context you provided highlights concerns about potentially overvalued stocks (indicated by the P/E ratio).  Given your neutral risk tolerance, it\u2019s wise to be cautious and not over-allocate to stocks at this time. A balanced approach, incorporating both stocks and bonds, is generally recommended for long-term investors.\n\n**Disclaimer:** *I am an AI and cannot provide financial advice. This information is for educational purposes only. It\u2019s essential to consult with a qualified financial advisor to discuss your specific situation and investment needs.*\n\nWould you like me to delve deeper into any specific aspect of this comparison, such as how bonds might fit into a portfolio with your stated preferences, or perhaps discuss diversification strategies?",
+      "contexts": [
+        "potentially reflecting high growth expectations or investor sentiment that isn't fully supported by current earnings. A P/E",
+        "potentially reflecting high growth expectations or investor sentiment. A P/E ratio significantly above 20 is generally",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "Looking at the stock data, the recent price action shows volatility. The average price is around $207.22, while the latest"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output is completely unrelated to the provided context, focusing on stocks and bonds instead of the expected company financial metrics and stock data analysis."
+        },
+        "answer_relevancy": {
+          "score": 0.8,
+          "reason": "The score is 0.80 because the response contains some irrelevant disclaimers and limitations, which detract from the core information about the differences between stocks and bonds.  While the main content is relevant and helpful, these additional statements slightly reduce the overall relevancy."
+        },
+        "contextual_relevancy": {
+          "score": 0.14285714285714285,
+          "reason": "The score is 0.14 because the relevant statement, \"This analysis examines a company based on the provided financial metrics and recent stock data,\" offers only tangential relevance to the question, while the majority of statements, such as \"The statement discusses P/E ratios and investor sentiment, which is irrelevant to the difference between stocks and bonds.\" and \"The statement is about stock data and volatility, which is not directly related to the difference between stocks and bonds,\" are completely off-topic."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 124,
+        "query_tokens": 9,
+        "response_tokens": 444,
+        "total_tokens": 577
+      }
+    },
+    {
+      "query": "How can I reduce my tax liability legally?",
+      "response": "Okay, based on your profile and the limited context provided, here\u2019s how you can approach reducing your tax liability legally:\n\n**Understanding the Situation**\n\nThe document highlights the importance of managing revenue and expenses effectively \u2013 a strong profitability is key. This suggests you\u2019re already focused on good financial management, which is a fantastic foundation for tax optimization.\n\n**Specific Actions Based on Available Information**\n\nWhile the provided text doesn\u2019t offer specific tax strategies, it emphasizes the need for:\n\n1.  **Detailed Budgeting & Performance Reviews:** Since you\u2019re aiming for long-term financial security and want to analyze your financial data, creating a detailed budget and regularly reviewing your financial performance is absolutely crucial. This will allow you to identify areas where you can potentially reduce expenses and, consequently, your taxable income.\n\n2.  **Strategic Financial Planning:**  Because you\u2019re focused on strategic planning, it\u2019s important to work with a qualified tax professional to explore all legal avenues for minimizing your tax burden. \n\n**General Advice Based on Your Profile**\n\nGiven your long-term investment horizon and preferences for sustainability, technology, and healthcare, consider these broader strategies:\n\n*   **Tax-Advantaged Investments:** Explore tax-advantaged investment accounts like 401(k)s or IRAs. Contributions may be tax-deductible, and growth is often tax-deferred.\n*   **Charitable Giving:** If you\u2019re interested in sustainability, consider donating to qualified charities. Donations may be tax-deductible.\n*   **Offsetting Income:**  Depending on your situation, explore opportunities to offset income with business expenses (if applicable) or other deductible items.\n\n**Important Disclaimer:** *I am an AI and cannot provide financial advice. This information is based solely on the provided context and your profile. It is essential to consult with a qualified tax advisor or financial planner to discuss your specific circumstances and receive personalized advice.*\n\nTo provide more tailored advice, I would need more information about your income, expenses, and investment portfolio.",
+      "contexts": [
+        "decision-making. A detailed budget and regular performance reviews are crucial for sustaining this strong profitability.",
+        "revenue into profit. Without further context, it?s reasonable to assume this individual is effectively managing their",
+        "expenses based on historical data and anticipated changes will allow for more informed financial planning and strategic"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the actual output aligns perfectly with all provided contexts, showing a complete understanding and no contradictions."
+        },
+        "answer_relevancy": {
+          "score": 0.7692307692307693,
+          "reason": "The score is 0.77 because the response included irrelevant disclaimers that detracted from the core information on tax reduction strategies.  While the main content likely provided useful advice, the repetitive disclaimers lowered the overall relevancy."
+        },
+        "contextual_relevancy": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the provided retrieval context is completely irrelevant to the input question, \"How can I reduce my tax liability legally?\"  All statements in the reasons for irrelevancy support this, citing topics such as \"business profitability\", \"profit management\", and \"financial planning and strategy\", none of which directly address legal tax reduction strategies."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 54,
+        "query_tokens": 9,
+        "response_tokens": 397,
+        "total_tokens": 460
+      }
+    },
+    {
+      "query": "What are the pros and cons of index funds versus actively managed funds?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-1.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 50\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 1\n}\n]"
+    },
+    {
+      "query": "What should I consider when planning for retirement in my 40s?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-1.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 50\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 5\n}\n]"
+    }
+  ],
+  "summary_stats": {
+    "judge" : "gemini-1.5-flash",
+    "LLM" : "qwen2.5-vl-32b-instruct:free",
+    "avg_faithfulness": 1.0,
+    "avg_hallucination": 0.5,
+    "avg_answer_relevance": 0.7846153846153847,
+    "avg_context_relevance": 0.07142857142857142,
+    "min_faithfulness": 1.0,
+    "max_faithfulness": 1.0,
+    "min_hallucination": 0.0,
+    "max_hallucination": 1.0,
+    "min_answer_relevance": 0.7692307692307693,
+    "max_answer_relevance": 0.8,
+    "min_context_relevance": 0.0,
+    "max_context_relevance": 0.14285714285714285,
+    "success_rate": 25.0,
+    "total_tokens_used": 1037.0,
+    "avg_tokens_per_query": 518.5,
+    "avg_context_tokens": 89.0,
+    "avg_response_tokens": 420.5,
+    "max_tokens_query": 577.0,
+    "context_cost": 3.5600000000000002e-06,
+    "response_cost": 3.364e-05,
+    "total_token_cost": 3.72e-05
+  },
+  "chart_path": "evaluation_results_20250704_204357_chart.png",
+  "query_map": {
+    "Q1": "What investment strategies should I consider based on my risk profile?",
+    "Q2": "How should I allocate my retirement portfolio?",
+    "Q3": "What are the tax implications of selling my stock investments?",
+    "Q4": "Should I pay off my mortgage early or invest that money?",
+    "Q5": "What's the difference between stocks and bonds?",
+    "Q6": "How can I reduce my tax liability legally?",
+    "Q7": "What are the pros and cons of index funds versus actively managed funds?",
+    "Q8": "What should I consider when planning for retirement in my 40s?"
+  }
+}

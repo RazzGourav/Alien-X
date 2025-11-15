@@ -1,0 +1,231 @@
+{
+  "detailed_results": [
+    {
+      "query": "What investment strategies should I consider based on my risk profile?",
+      "response": "### Personalized Financial Advisory Response\n\n#### **User Profile Recap**\n- **Risk Tolerance**: Neutral\n- **Financial Goals**: Analyze financial data, determine next steps, investment, tax optimization, retirement, financial security\n- **Investment Horizon**: Long-term\n- **Key Preferences**: Sustainability (10.51%), Technology (6.07%), Healthcare (5.72%)\n\n#### **Retrieved Document Context Analysis**\nThe retrieved document context highlights the importance of:\n1. **Monitoring stock performance and debt levels** closely.\n2. Adopting a **more conservative financial strategy**.\n3. Being cautious about **stock volatility** and the potential for further corrections.\n4. Ensuring that expenses are not overly concentrated in a few areas to avoid vulnerability to market fluctuations.\n5. The need for **strategic asset sales or improved cash flow management** to address valuation concerns.\n\n#### **Tailored Investment Strategies Based on User Profile and Context**\n\nGiven your neutral risk tolerance, long-term investment horizon, and specific preferences for sustainability, technology, and healthcare, here are some investment strategies you should consider:\n\n---\n\n### **1. Diversification Across Sectors**\n- **Why**: Diversification is crucial for managing risk, especially given the advice to monitor stock volatility and avoid concentration in a few areas.\n- **How**:\n  - Allocate your investments across multiple sectors, including sustainability, technology, and healthcare, but also consider other stable sectors like consumer goods, utilities, and real estate.\n  - Use **exchange-traded funds (ETFs)** or **mutual funds** that focus on these sectors to achieve broad diversification.\n\n---\n\n### **2. Focus on Sustainable Investments**\n- **Why**: Your preference for sustainability (10.51%) aligns with the growing trend of environmental, social, and governance (ESG) investing. ESG funds are designed to provide both financial returns and positive societal impact.\n- **How**:\n  - Invest in **ESG-focused ETFs or mutual funds** that target companies with strong sustainability practices.\n  - Consider **green bonds** or **socially responsible funds** that align with your values.\n\n---\n\n### **3. Emphasize Long-Term Growth with Technology and Healthcare**\n- **Why**: Your interest in technology (6.07%) and healthcare (5.72%) suggests a focus on sectors with high growth potential. These sectors are expected to drive innovation and economic growth over the long term.\n- **How**:\n  - Invest in **index funds or ETFs** that track technology and healthcare sectors.\n  - Consider **dividend-paying stocks** in these sectors for steady income over time.\n  - Monitor the performance of these stocks closely, as advised in the context, to ensure they justify their valuations.\n\n---\n\n### **4. Adopt a Conservative Investment Approach**\n- **Why**: The retrieved context advises a more conservative financial strategy, which aligns with your neutral risk tolerance.\n- **How**:\n  - Allocate a portion of your portfolio to **low-risk assets** such as **government bonds**, **high-quality corporate bonds**, or **money market funds**.\n  - Use **target-date funds** or **balanced funds** that automatically adjust your asset allocation as you approach retirement, ensuring a mix of growth and safety.\n\n---\n\n### **5. Monitor Debt and Cash Flow**\n- **Why**: The context emphasizes the importance of monitoring debt levels and cash flow management. This is particularly relevant for long-term financial security.\n- **How**:\n  - Invest in companies with strong balance sheets and low debt levels. Look for metrics like **debt-to-equity ratio** and **current ratio**.\n  - Consider **income-focused investments** like **dividend-paying stocks** or **real estate investment trusts (REITs)** to generate consistent cash flow.\n\n---\n\n### **6. Tax Optimization**\n- **Why**: Tax optimization is one of your financial goals, and it can significantly impact your long-term returns.\n- **How**:\n  - Use **tax-efficient investment vehicles** such as **Individual Retirement Accounts (IRAs)** or **401(k) plans** to defer taxes.\n  - Consider **tax-loss harvesting** strategies to offset capital gains and reduce your tax liability.\n  - Work with a tax advisor to ensure your investment strategy aligns with tax laws and maximizes your after-tax returns.\n\n---\n\n### **7. Retirement Planning**\n- **Why**: Retirement is a key financial goal, and your long-term investment horizon makes it ideal to start planning early.\n- **How**:\n  - Contribute regularly to **retirement accounts** like IRAs or 401(k)s.\n  - Consider **target-date funds** tailored to your retirement age, which automatically adjust your asset allocation as you get closer to retirement.\n  - Monitor your portfolio's performance and adjust your investments periodically to ensure alignment with your retirement goals.\n\n---\n\n###",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the actual output and context show strong alignment across multiple aspects of financial strategy, risk management, and data analysis, with no contradictions identified."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly addresses the user's question about investment strategies based on risk profile, without any irrelevant information."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 94,
+        "query_tokens": 12,
+        "response_tokens": 988,
+        "total_tokens": 1094
+      }
+    },
+    {
+      "query": "How should I allocate my retirement portfolio?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "Unable to retrieve routing information"
+    },
+    {
+      "query": "What are the tax implications of selling my stock investments?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "Failed to read from defunct connection IPv4Address(('si-409b8954-4caf.production-orch-0068.neo4j.io', 7687)) (ResolvedIPv4Address(('34.126.171.25', 7687)))"
+    },
+    {
+      "query": "Should I pay off my mortgage early or invest that money?",
+      "response": "### Personalized Financial Advisory Response\n\n#### **User Query: Should I pay off my mortgage early or invest that money?**\n\nTo provide a tailored response, let's analyze the user's profile, the retrieved document context, and the general principles of financial planning. Here's a step-by-step breakdown:\n\n---\n\n### **1. Understanding the User's Profile**\n- **Risk Tolerance**: Neutral  \n  This indicates that the user is comfortable with moderate risk but prefers stability and security in their financial decisions.\n  \n- **Financial Goals**:  \n  - Analyze financial data  \n  - Determine next steps  \n  - Investment  \n  - Determine total revenue  \n  - Tax Optimization  \n  - Retirement  \n  - Identify concerning trends  \n  - Financial security  \n  These goals suggest a focus on long-term financial stability, retirement planning, and optimizing returns while managing risk.\n\n- **Investment Horizon**: Long-term  \n  This aligns with a strategy that prioritizes growth and compounding over time.\n\n- **Key Preferences**:  \n  - Sustainability (0.1051)  \n  - Technology (0.0607)  \n  - Healthcare (0.0572)  \n  These preferences suggest an interest in socially responsible investing and sectors that align with these themes.\n\n---\n\n### **2. Analyzing the Retrieved Document Context**\nThe retrieved document context provides some general financial advice, including:\n- **Monitoring stock performance and debt levels**: This highlights the importance of managing debt and assessing the performance of investments.\n- **Conservative financial strategy**: The context suggests a preference for conservative approaches, which aligns with the user's neutral risk tolerance.\n- **Strategic asset sales or improved cash flow management**: This emphasizes the importance of managing cash flow effectively.\n- **Monitoring stock volatility and potential corrections**: This reinforces the need for vigilance in investment decisions.\n\nWhile the context does not directly address mortgage decisions, it underscores the importance of managing debt and ensuring financial stability.\n\n---\n\n### **3. Evaluating the Mortgage vs. Investment Decision**\nThe decision to pay off a mortgage early or invest the money depends on several factors, including:\n- **Mortgage Interest Rate**: If the mortgage interest rate is high, paying off the mortgage early can be beneficial as it eliminates a significant financial obligation.\n- **Investment Returns**: If the expected return on investment is higher than the mortgage interest rate, investing the money may be more advantageous.\n- **Risk Tolerance**: Since the user has a neutral risk tolerance, they may prefer a balanced approach that ensures financial security while allowing for growth.\n- **Liquidity Needs**: Paying off the mortgage early reduces liquidity, which could be a concern if unexpected expenses arise.\n\n#### **Key Considerations for This User**\n- **Neutral Risk Tolerance**: The user prefers a balanced approach. Paying off the mortgage early provides security and reduces risk, while investing offers growth potential.\n- **Long-term Investment Horizon**: The user is focused on long-term goals, such as retirement and financial security. Investing can provide compounding returns over time.\n- **Key Preferences**: The user's interest in sustainability, technology, and healthcare suggests a preference for socially responsible and growth-oriented investments.\n\n---\n\n### **4. Tailored Financial Advice**\nBased on the user's profile and the context provided, here is a personalized recommendation:\n\n#### **Option 1: Pay Off the Mortgage Early**\n- **Pros**:  \n  - Reduces monthly expenses and eliminates a significant financial obligation.  \n  - Provides peace of mind and financial security.  \n  - Aligns with the user's neutral risk tolerance and focus on financial stability.  \n- **Cons**:  \n  - Reduces liquidity and flexibility.  \n  - May miss out on potential higher returns from investing.  \n\n#### **Option 2: Invest the Money**\n- **Pros**:  \n  - Offers the potential for higher returns over the long term, aligning with the user's long-term investment horizon.  \n  - Allows for diversification into sectors like sustainability, technology, and healthcare, which match the user's preferences.  \n  - Provides growth potential for retirement and financial security.  \n- **Cons**:  \n  - Introduces additional risk, which may not fully align with the user's neutral risk tolerance.  \n  - Requires careful monitoring of investments to ensure they align with the user's goals and preferences.  \n\n#### **Recommended Approach: Hybrid Strategy**\nGiven the user's neutral risk tolerance and long-term goals, a **hybrid strategy** is recommended:\n1. **Prioritize Mortgage Payments**:  \n   - Continue making regular mortgage payments as scheduled.  \n   - If possible, make additional payments to reduce the principal, which will lower interest costs over time.  \n   - This approach provides a balance between reducing debt and maintaining financial security.\n\n2. **Invest a Portion of the Funds**:  \n   - Allocate a portion of the available funds to investments that align with the user's preferences (e",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "revenue into profit. Without further context, it?s reasonable to assume this individual is effectively managing their",
+        "**Note:** I've assumed the currency is USD based on the numbers. If a different currency is used, the analysis would"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.4,
+          "reason": "The score is 0.40 because the output aligns with three out of five contexts by correctly mentioning stock performance monitoring, strategic asset sales, and cash flow management, as well as stock volatility; however, it omits key elements from the remaining two contexts regarding personal finance management and currency assumptions."
+        },
+        "answer_relevancy": {
+          "score": 0.8333333333333334,
+          "reason": "The score is 0.83 because the response contains some irrelevant information, such as general financial analysis steps and investment sectors, which are not directly relevant to the core question of paying off a mortgage versus investing.  However, the response is mostly relevant in addressing the core question by considering factors relevant to decision-making in this situation."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 101,
+        "query_tokens": 12,
+        "response_tokens": 994,
+        "total_tokens": 1107
+      }
+    },
+    {
+      "query": "What's the difference between stocks and bonds?",
+      "response": "### Personalized Financial Advisory Response\n\n#### **Understanding the Difference Between Stocks and Bonds**\nTo address your query about the difference between stocks and bonds, let's break it down in a way that aligns with your profile and financial goals:\n\n1. **Stocks**:\n   - **Definition**: Stocks represent ownership in a company. When you buy a stock, you become a shareholder, meaning you own a portion of the company.\n   - **Risk and Return**: Stocks are generally considered riskier than bonds because their value can fluctuate significantly based on market conditions, company performance, and economic factors. However, they also offer the potential for higher returns over the long term, especially if the company grows and performs well.\n   - **Income**: Stocks can provide income through dividends (if the company pays them) or capital gains when you sell the stock at a higher price than you bought it for.\n   - **Relevance to Your Profile**:\n     - **Risk Tolerance**: As your risk tolerance is neutral, stocks can still be a part of your portfolio, but they should be balanced with other less risky investments.\n     - **Investment Horizon**: Given your long-term investment horizon, stocks can be a good fit, as they have historically provided strong returns over extended periods.\n     - **Preferences**: Your interest in sustainability, technology, and healthcare aligns well with investing in stocks, as you can choose companies that align with these themes.\n\n2. **Bonds**:\n   - **Definition**: Bonds are debt instruments issued by companies or governments. When you buy a bond, you are essentially lending money to the issuer in exchange for periodic interest payments and the return of the principal amount at maturity.\n   - **Risk and Return**: Bonds are generally considered less risky than stocks because they offer fixed interest payments and the promise of returning the principal amount at maturity (assuming the issuer does not default). However, the potential return is typically lower than that of stocks.\n   - **Income**: Bonds provide income through regular interest payments, which can be a stable source of cash flow.\n   - **Relevance to Your Profile**:\n     - **Risk Tolerance**: Bonds can help balance the risk in your portfolio, especially given your neutral risk tolerance. They can provide stability and reduce overall portfolio volatility.\n     - **Investment Horizon**: Bonds can be a good fit for your long-term goals, particularly if you are looking for a steady income stream or a way to preserve capital.\n     - **Preferences**: You can invest in bonds that align with your preferences, such as green bonds (for sustainability) or corporate bonds from technology or healthcare companies.\n\n#### **Key Differences Between Stocks and Bonds**\n| **Aspect**           | **Stocks**                                                                 | **Bonds**                                                                 |\n|----------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------|\n| **Ownership**        | Ownership in a company (shareholder)                                         | Lending money to the issuer (creditor)                                     |\n| **Risk**             | Higher risk due to market volatility and company performance                 | Lower risk due to fixed interest payments and return of principal at maturity |\n| **Return**           | Higher potential return, but with greater volatility                         | Lower but more stable return                                                |\n| **Income**           | Dividends (if paid) and capital gains                                        | Fixed interest payments                                                   |\n| **Time Horizon**     | Suitable for long-term growth                                                | Suitable for both short-term and long-term goals, depending on maturity     |\n\n#### **Tailored Advice Based on Your Profile**\nGiven your neutral risk tolerance, long-term investment horizon, and preferences for sustainability, technology, and healthcare, here\u2019s how you can approach stocks and bonds:\n\n1. **Diversification**:\n   - **Stocks**: Allocate a portion of your portfolio to stocks, focusing on companies that align with your preferences. For example, you could invest in sustainable companies, technology firms, or healthcare providers. Given your long-term horizon, you can afford to hold these stocks for extended periods, allowing them to grow.\n   - **Bonds**: Include bonds in your portfolio to balance the risk. Consider investing in high-quality bonds, such as government bonds or corporate bonds from stable companies. You can also explore green bonds to align with your sustainability preferences.\n\n2. **Asset Allocation**:\n   - A balanced approach might involve allocating 60% to stocks and 40% to bonds. This allocation can provide growth potential from stocks while offering stability and income from bonds. Adjust this based on your comfort with risk and specific financial goals.\n\n3. **Monitoring and Adjusting**:\n   - **Stocks**: Monitor the performance of your stock investments, especially in light of market trends and company-specific news. The retrieved document mentions monitoring stock volatility and potential corrections, which is a good practice. Use tools to track key metrics like the P/E ratio to assess whether a stock is overvalued or undervalued.\n   - **Bonds**:",
+      "contexts": [
+        "potentially reflecting high growth expectations or investor sentiment that isn't fully supported by current earnings. A P/E",
+        "potentially reflecting high growth expectations or investor sentiment. A P/E ratio significantly above 20 is generally",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output completely deviates from the context by discussing stocks and bonds instead of focusing on P/E ratios, growth expectations, company analysis based on financial metrics, stock volatility, and expense concentration."
+        },
+        "answer_relevancy": {
+          "score": 0.9487179487179487,
+          "reason": "The score is 0.95 because the response accurately explains the core differences between stocks and bonds, but includes some slightly off-topic sentences about monitoring stock performance and using financial tools, which are not directly related to the central question."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 98,
+        "query_tokens": 9,
+        "response_tokens": 998,
+        "total_tokens": 1105
+      }
+    },
+    {
+      "query": "How can I reduce my tax liability legally?",
+      "response": "### Personalized Financial Advisory Response\n\n#### **User Query:** How can I reduce my tax liability legally?\n\n#### **Analysis of User Profile and Context**\n- **Risk Tolerance:** Neutral\n- **Financial Goals:** The user has a broad set of financial goals, including tax optimization, retirement planning, and financial security. This indicates a focus on long-term financial stability and efficiency.\n- **Investment Horizon:** Long-term, which aligns well with strategies that may involve tax-deferred or tax-advantaged accounts.\n- **Key Preferences:** The user shows a preference for sustainability (10.51%), technology (6.07%), and healthcare (5.72%). These preferences may influence investment choices but are not directly relevant to tax optimization.\n- **Retrieved Context:** The context provided mentions the importance of budgeting, performance reviews, and using historical data for informed financial planning. While this is generally relevant to financial management, it does not directly address tax optimization strategies.\n\n#### **Tailored Advice Based on User Profile**\nGiven the user's neutral risk tolerance, long-term investment horizon, and focus on tax optimization, here are some personalized strategies to reduce tax liability legally:\n\n1. **Maximize Contributions to Tax-Advantaged Accounts**\n   - **401(k) or Similar Employer-Sponsored Plans:** Contribute up to the maximum allowable amount to reduce your taxable income. For 2023, the contribution limit is $22,500 for individuals under 50, and $30,000 for those aged 50 or older.\n   - **Traditional IRA:** If eligible, contribute to a Traditional IRA, which allows for tax-deductible contributions. The contribution limit for 2023 is $6,500 ($7,500 for those aged 50 or older).\n   - **Health Savings Account (HSA):** If you have a high-deductible health plan, contribute to an HSA. Contributions are tax-deductible, and withdrawals for qualified medical expenses are tax-free.\n\n2. **Utilize Tax Credits**\n   - **Saver\u2019s Credit:** If your income qualifies, you may be eligible for the Saver\u2019s Credit, which provides a tax credit for contributions to retirement accounts.\n   - **Child Tax Credit:** If applicable, ensure you are claiming the Child Tax Credit, which can significantly reduce your tax liability.\n   - **Education Credits:** If you or your dependents are pursuing higher education, consider the American Opportunity Tax Credit or Lifetime Learning Credit.\n\n3. **Harvest Tax Losses**\n   - **Tax Loss Harvesting:** If you have investments that have declined in value, consider selling them to realize capital losses. These losses can be used to offset capital gains or up to $3,000 of ordinary income per year. Any remaining losses can be carried forward to future years.\n\n4. **Optimize Investment Strategies**\n   - **Long-Term Capital Gains:** Hold investments for more than one year to qualify for long-term capital gains tax rates, which are generally lower than short-term capital gains rates.\n   - **Tax-Exempt Bonds:** Consider investing in municipal bonds, which are typically exempt from federal taxes and sometimes state and local taxes, depending on your residency.\n\n5. **Charitable Contributions**\n   - **Donate Appreciated Assets:** Instead of donating cash, consider donating appreciated stocks or other assets held for more than one year. This allows you to avoid paying capital gains tax on the appreciated portion and receive a charitable deduction for the fair market value of the asset.\n   - **Qualified Charitable Distribution (QCD):** If you are 70\u00bd or older, you can make direct contributions from your IRA to a qualified charity, up to $100,000 per year, without counting the distribution as taxable income.\n\n6. **Review and Optimize Your Tax Withholding**\n   - **W-4 Form:** Ensure that your withholding is accurately set to avoid overpaying or underpaying taxes. Adjust your withholding allowances if necessary to align with your expected tax liability.\n\n7. **Consider a Roth Conversion (if applicable)**\n   - If you have a Traditional IRA or 401(k), consider converting a portion to a Roth IRA. While this may trigger a taxable event in the year of conversion, future qualified withdrawals from a Roth IRA are tax-free, providing long-term tax benefits.\n\n8. **Consult a Tax Professional**\n   - **Expert Advice:** Given the complexity of tax laws and the user's focus on long-term financial planning, it is advisable to consult a certified public accountant (CPA) or a tax professional. They can provide personalized advice based on your specific financial situation and help identify additional opportunities for tax optimization.\n\n#### **General Advice**\nWhile the retrieved context does not provide specific details on tax optimization, it emphasizes the importance of budget",
+      "contexts": [
+        "decision-making. A detailed budget and regular performance reviews are crucial for sustaining this strong profitability.",
+        "revenue into profit. Without further context, it?s reasonable to assume this individual is effectively managing their",
+        "expenses based on historical data and anticipated changes will allow for more informed financial planning and strategic"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 0.9090909090909091,
+          "reason": "The score is 0.91 because the actual output incorrectly claims a specific contribution limit for 2023, while the retrieval context lacks this information, resulting in two contradictions."
+        },
+        "hallucination": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output hallucinates a detailed guide on tax reduction strategies, completely unrelated to the context's focus on budgeting, performance reviews, and financial planning based on historical data."
+        },
+        "answer_relevancy": {
+          "score": 0.7666666666666667,
+          "reason": "The score is 0.77 because the response includes some relevant information on tax reduction strategies but also includes several irrelevant statements about broader financial goals and general financial management practices that are not directly related to tax optimization."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 54,
+        "query_tokens": 9,
+        "response_tokens": 968,
+        "total_tokens": 1031
+      }
+    },
+    {
+      "query": "What are the pros and cons of index funds versus actively managed funds?",
+      "response": "### Personalized Financial Advisory Response\n\n#### **User's Profile Recap**\n- **Risk Tolerance**: Neutral\n- **Financial Goals**: Analyze financial data, determine next steps, investment, tax optimization, retirement, financial security.\n- **Investment Horizon**: Long-term\n- **Key Preferences**: Sustainability (10.51%), Technology (6.07%), Healthcare (5.72%).\n\n#### **User Query**\nThe user is asking about the **pros and cons of index funds versus actively managed funds**. While the retrieved document context does not directly address this topic, we can provide a general analysis based on the user's profile and the principles of investing.\n\n---\n\n### **Analysis of Index Funds vs. Actively Managed Funds**\n\n#### **1. Index Funds**\n**Definition**: Index funds are passively managed funds that aim to replicate the performance of a specific market index (e.g., S&P 500, NASDAQ, etc.). They do this by holding all or a representative sample of the securities in the index.\n\n##### **Pros for the User**\n- **Lower Fees**: Index funds typically have lower expense ratios compared to actively managed funds. This is beneficial for long-term investors like the user, as lower fees can lead to higher returns over time.\n- **Diversification**: Index funds provide broad market exposure, which aligns well with the user's long-term investment horizon and neutral risk tolerance. Diversification reduces risk by spreading investments across multiple companies and sectors.\n- **Passive Management**: Since index funds track an index, they are less susceptible to the performance variability of a fund manager. This aligns with the user's preference for stability and financial security.\n- **Alignment with Key Preferences**: Many index funds now include options that focus on sustainability, technology, and healthcare, which match the user's key preferences. For example, there are ESG (Environmental, Social, and Governance) index funds and sector-specific index funds.\n\n##### **Cons for the User**\n- **Limited Active Management**: Index funds do not attempt to outperform the market; they aim to match it. This may not be ideal if the user is looking for funds that actively seek to beat the market.\n- **No Sector Focus**: While there are sector-specific index funds, traditional broad-market index funds do not allow for targeted exposure to specific sectors like technology or healthcare unless the user specifically chooses a sector-focused index fund.\n\n---\n\n#### **2. Actively Managed Funds**\n**Definition**: Actively managed funds are run by professional fund managers who aim to outperform the market by selecting specific securities and making strategic investment decisions.\n\n##### **Pros for the User**\n- **Potential for Outperformance**: Actively managed funds have the potential to outperform the market if the fund manager makes successful investment decisions. This could be appealing if the user is willing to take on slightly more risk for the possibility of higher returns.\n- **Targeted Sector Exposure**: Actively managed funds can focus on specific sectors (e.g., technology, healthcare) or themes (e.g., sustainability), which aligns with the user's key preferences.\n- **Dynamic Management**: Fund managers can adjust the portfolio based on market conditions, which may be beneficial in volatile markets.\n\n##### **Cons for the User**\n- **Higher Fees**: Actively managed funds generally have higher expense ratios due to the costs associated with fund management. Over the long term, these higher fees can erode returns.\n- **No Guarantee of Outperformance**: Historically, most actively managed funds fail to consistently outperform their benchmarks after accounting for fees. This risk may not align well with the user's neutral risk tolerance.\n- **Market Timing Risk**: Active management involves market timing and security selection, which can introduce additional risk. If the fund manager's decisions are incorrect, it could lead to underperformance.\n\n---\n\n### **Recommendation Based on User Profile**\n\nGiven the user's **neutral risk tolerance**, **long-term investment horizon**, and **key preferences** for sustainability, technology, and healthcare, here are tailored recommendations:\n\n1. **Index Funds**:\n   - **Pros**: Lower fees, broad diversification, and alignment with the user's long-term goals.\n   - **Recommendation**: Consider **ESG index funds** or **sector-specific index funds** (e.g., technology or healthcare) to align with the user's key preferences. These funds provide exposure to the user's preferred sectors while maintaining the benefits of passive management.\n\n2. **Actively Managed Funds**:\n   - **Pros**: Potential for outperformance and targeted sector exposure.\n   - **Cons**: Higher fees and no guarantee of outperformance.\n   - **Recommendation**: If the user is willing to take on slightly more risk and is interested in actively managed funds, consider funds that focus on sustainability, technology, or healthcare. However, carefully evaluate the fund's historical performance, fees, and management team to ensure alignment with the user's goals.\n\n---\n\n",
+      "contexts": [
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "consistent performance? Understanding the composition of expenses (e.g., fixed vs. variable) would provide a more",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output is completely unrelated to the provided context, focusing on a broad investment strategy comparison while the context pertains to company-specific financial analysis and risk assessment."
+        },
+        "answer_relevancy": {
+          "score": 0.8636363636363636,
+          "reason": "The score is 0.86 because the response includes some irrelevant information, such as considerations of the user's risk tolerance and financial goals, which are not directly related to the core question of comparing index and actively managed funds.  The response also restates the question without adding any new information."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 79,
+        "query_tokens": 14,
+        "response_tokens": 994,
+        "total_tokens": 1087
+      }
+    },
+    {
+      "query": "What should I consider when planning for retirement in my 40s?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    }
+  ],
+  "summary_stats": {
+    "judge": "gemini-1.5-flash",
+    "LLM": "qwen2.5-vl-32b-instruct:free",
+    "avg_faithfulness": 0.9818181818181818,
+    "avg_hallucination": 0.6799999999999999,
+    "avg_answer_relevance": 0.8824708624708626,
+    "avg_context_relevance": NaN,
+    "min_faithfulness": 0.9090909090909091,
+    "max_faithfulness": 1.0,
+    "min_hallucination": 0.0,
+    "max_hallucination": 1.0,
+    "min_answer_relevance": 0.7666666666666667,
+    "max_answer_relevance": 1.0,
+    "min_context_relevance": NaN,
+    "max_context_relevance": NaN,
+    "success_rate": 62.5,
+    "total_tokens_used": 5424.0,
+    "avg_tokens_per_query": 1084.8,
+    "avg_context_tokens": 85.2,
+    "avg_response_tokens": 988.4,
+    "max_tokens_query": 1107.0,
+    "context_cost": 0.00038340000000000005,
+    "response_cost": 0.0044478,
+    "total_token_cost": 0.0048312
+  },
+  "chart_path": "evaluation_results_20250712_023337_chart.png",
+  "query_map": {
+    "Q1": "What investment strategies should I consider based on my risk profile?",
+    "Q2": "How should I allocate my retirement portfolio?",
+    "Q3": "What are the tax implications of selling my stock investments?",
+    "Q4": "Should I pay off my mortgage early or invest that money?",
+    "Q5": "What's the difference between stocks and bonds?",
+    "Q6": "How can I reduce my tax liability legally?",
+    "Q7": "What are the pros and cons of index funds versus actively managed funds?",
+    "Q8": "What should I consider when planning for retirement in my 40s?"
+  }
+}

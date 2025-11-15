@@ -1,0 +1,26 @@
+{
+  "user_id": "user_35SxwJmX0vuImBp4vkMQavH7pWS",
+  "risk_tolerance": "moderate",
+  "financial_goals": [
+    "retirement",
+    "investment"
+  ],
+  "investment_horizon": "long-term",
+  "preferences": {
+    "sustainability": 0.24499999999999997,
+    "technology": 0.24499999999999997,
+    "healthcare": 0.24499999999999997
+  },
+  "interaction_history": [
+    {
+      "query": "tell me about this",
+      "timestamp": "2025-11-15T01:20:06.196164",
+      "response_summary": "Based on the provided context and your user profile, here's a tailored financial advisory response:\n..."
+    },
+    {
+      "query": "tell me about this",
+      "timestamp": "2025-11-15T06:18:23.513856",
+      "response_summary": "Based on the provided context and your user profile, here's a tailored financial advisory response:\n..."
+    }
+  ]
+}

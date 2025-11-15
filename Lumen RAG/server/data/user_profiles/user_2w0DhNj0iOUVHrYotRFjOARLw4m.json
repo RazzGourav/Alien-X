@@ -1,0 +1,124 @@
+{
+  "user_id": "user_2w0DhNj0iOUVHrYotRFjOARLw4m",
+  "risk_tolerance": "neutral",
+  "financial_goals": [
+    "Analyze financial data",
+    "Determine next steps",
+    "investment",
+    "Investment",
+    "Determine total revenue",
+    "Tax Optimization",
+    "Retirement",
+    "Identify concerning trends",
+    "retirement",
+    "Financial security"
+  ],
+  "investment_horizon": "long-term",
+  "preferences": {
+    "sustainability": 0.10513534932682721,
+    "technology": 0.0607360785671499,
+    "healthcare": 0.057206608567149896
+  },
+  "interaction_history": [
+    {
+      "query": "Are there any concerning trends in my finances?\n",
+      "timestamp": "2025-04-26T00:54:40.537825",
+      "response_summary": "Based on the information provided, I cannot pinpoint any specific concerning trends in your finances..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T01:09:13.774428",
+      "response_summary": "Based on the information provided, I cannot pinpoint any specific concerning trends in your finances..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T01:32:25.301802",
+      "response_summary": "\nBased solely on the provided context \u2013 which repeatedly emphasizes the importance of analyzing hist..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T02:47:54.742379",
+      "response_summary": "\nBased solely on the provided context \u2013 which repeatedly emphasizes the importance of analyzing hist..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T02:56:32.786830",
+      "response_summary": "\nBased solely on the provided context \u2013 which repeatedly emphasizes the importance of analyzing hist..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T03:02:59.818004",
+      "response_summary": "\nBased solely on the provided context \u2013 which repeatedly emphasizes the importance of analyzing hist..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T03:07:11.105132",
+      "response_summary": "\nBased solely on the provided context \u2013 which repeatedly emphasizes the importance of analyzing hist..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T03:14:29.859547",
+      "response_summary": "\n\nBased solely on the provided context \u2013 which repeatedly emphasizes the importance of analyzing his..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T03:46:56.290829",
+      "response_summary": "\nBased on the information available, it\u2019s difficult to definitively identify any *specific* concerni..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T03:53:40.430695",
+      "response_summary": "\nOkay, based on your profile and the available information, let\u2019s address your question about concer..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-04-26T04:01:54.770986",
+      "response_summary": "\nOkay, based on your profile and the available information, let\u2019s address your question about concer..."
+    },
+    {
+      "query": "What investment opportunities align with my financial situation right now?",
+      "timestamp": "2025-04-26T10:19:32.269975",
+      "response_summary": "\nOkay, based on your profile \u2013 a moderate risk tolerance, long-term investment horizon, and preferen..."
+    },
+    {
+      "query": "Are there any concerning trends in my finances?",
+      "timestamp": "2025-05-13T01:13:19.914876",
+      "response_summary": "\nOkay, let\u2019s address your question about concerning trends in your finances.\n\nBased on the informati..."
+    },
+    {
+      "query": "Based on my finances, what stocks should I invest in?",
+      "timestamp": "2025-05-14T11:57:36.790293",
+      "response_summary": "\nOkay, based on your profile \u2013 a moderate risk tolerance, long-term investment horizon, and preferen..."
+    },
+    {
+      "query": "What investment strategies should I consider based on my risk profile?",
+      "timestamp": "2025-06-22T12:53:23.450428",
+      "response_summary": "Okay, based on the information we have, let\u2019s discuss investment strategies.\n\nCurrently, we don\u2019t ha..."
+    },
+    {
+      "query": "How should I allocate my retirement portfolio?",
+      "timestamp": "2025-06-22T12:56:17.941233",
+      "response_summary": "\n\nOkay, let\u2019s discuss how to allocate your retirement portfolio, considering your moderate risk tole..."
+    },
+    {
+      "query": "What are the tax implications of selling my stock investments?",
+      "timestamp": "2025-06-22T12:59:03.524336",
+      "response_summary": "\n\nOkay, let\u2019s address the tax implications of selling your stock investments, considering your moder..."
+    },
+    {
+      "query": "what are the wrong trends in my data",
+      "timestamp": "2025-06-27T00:26:24.709985",
+      "response_summary": "Okay, based on your profile and the limited data provided, here\u2019s an assessment of potential concern..."
+    },
+    {
+      "query": "What investment strategies should I consider?",
+      "timestamp": "2025-07-06T14:14:15.493011",
+      "response_summary": "Based on the provided user profile, retrieved document context, and the user's query, here is a pers..."
+    },
+    {
+      "query": "What investment strategies should I consider?",
+      "timestamp": "2025-07-06T14:18:09.048083",
+      "response_summary": "### Personalized Financial Advisory Response\n\n#### **User Profile Recap**\n- **Risk Tolerance**: Neut..."
+    }
+  ]
+}

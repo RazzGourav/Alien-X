@@ -1,0 +1,138 @@
+{
+  "detailed_results": [
+    {
+      "query": "What investment strategies should I consider based on my risk profile?",
+      "response": "Based on your **neutral risk tolerance**, **long-term investment horizon**, and financial goals (including retirement, tax optimization, and financial security), here are some tailored investment strategies to consider:\n\n1. **Diversified Portfolio with a Neutral Risk Approach**:\n   - Since you have a neutral risk tolerance, a balanced portfolio (e.g., 60% equities, 30% bonds, 10% alternative assets) could align with your preferences.\n   - Given your interest in **sustainability (10.5%)**, consider allocating a portion of your equity holdings to **ESG (Environmental, Social, Governance) funds** or sustainable investment options.\n   - Your moderate interest in **technology (6.1%)** and **healthcare (5.7%)** suggests adding exposure to these sectors, but avoid overconcentration.\n\n2. **Monitor Stock Performance and Debt Levels**:\n   - The retrieved context advises **closely monitoring stock performance and debt levels** of investments. This aligns with your goal of **identifying concerning trends**.\n   - Avoid overvalued stocks where growth may not justify the premium. Instead, focus on companies with **strong cash flow management** and **diversified revenue streams** to mitigate risk.\n\n3. **Tax Optimization and Retirement Planning**:\n   - Since retirement is a key goal, consider **tax-advantaged accounts** (e.g., 401(k), IRA) to maximize long-term growth.\n   - If you have concentrated expenses in certain areas (as hinted in the context), **rebalancing your portfolio periodically** can help manage risk.\n\n4. **Avoid Overconcentration in Volatile Sectors**:\n   - The context warns about **volatility and potential corrections**, so avoid heavy exposure to single-sector or high-risk investments.\n   - If investing in technology or healthcare, ensure diversification within those sectors to reduce risk.\n\n### General Advice (if context is insufficient):\n- **Rebalance annually** to maintain your neutral risk profile.\n- **Consider index funds or ETFs** for broad market exposure with lower fees.\n- **Review debt levels** of companies in your portfolio to ensure financial stability.\n\nSince the context lacks specific company or market data, these recommendations are based on your profile and general financial principles. For precise stock or fund selections, further analysis would be needed.",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the actual output aligns perfectly with the provided context, showing no contradictions and comprehensively addressing all aspects of the context's advice and concerns."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly addresses the user's question about investment strategies based on risk profile, without any irrelevant information."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 94,
+        "query_tokens": 12,
+        "response_tokens": 474,
+        "total_tokens": 580
+      }
+    },
+    {
+      "query": "How should I allocate my retirement portfolio?",
+      "response": "Based on your **neutral risk tolerance**, **long-term investment horizon**, and financial goals (including retirement, tax optimization, and financial security), here\u2019s a tailored allocation strategy for your retirement portfolio:\n\n### **1. Core Allocation (Stable Growth)**\n- **60-70% in Diversified Equities**:\n  - Prioritize **low-volatility, dividend-paying stocks** (e.g., blue-chip companies with strong cash flow).\n  - Consider **ESG (Environmental, Social, Governance) funds** given your moderate preference for sustainability (10.5%).\n  - Allocate a small portion (5-10%) to **technology and healthcare sectors** (6-7% preference) but avoid overconcentration.\n\n- **20-30% in Fixed Income**:\n  - **Bonds or bond ETFs** (e.g., government or investment-grade corporate bonds) for stability.\n  - **Municipal bonds** if tax optimization is a priority.\n\n### **2. Risk Management (Monitoring & Adjustments)**\n- **Monitor volatility and debt levels** in your equity holdings (as advised in the context).\n- Avoid overconcentration in single sectors or stocks to mitigate market fluctuations.\n- Rebalance annually to maintain your target allocation.\n\n### **3. Additional Considerations**\n- **Tax-Advantaged Accounts**: Maximize contributions to **401(k)s, IRAs, or Roth IRAs** for tax efficiency.\n- **Emergency Fund**: Ensure 3-6 months of expenses in cash before aggressive investing.\n\n### **General Advice (If Context is Insufficient)**\nSince the provided context lacks specific company or market data, avoid speculative investments. Stick to **broadly diversified, low-cost index funds** (e.g., S&P 500 ETFs) for core holdings. Adjust allocations as you near retirement (e.g., shift to bonds for reduced risk).\n\nWould you like help identifying specific ESG or dividend-focused funds based on your preferences?",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.2,
+          "reason": "The score is 0.20 because the output aligns with several aspects of the context's advice on risk management and diversification, particularly regarding volatility and sector concentration. However, it omits the context's emphasis on strategic asset sales and cash flow improvement, leading to a moderate hallucination score."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly and completely addresses the user's question on retirement portfolio allocation."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 94,
+        "query_tokens": 8,
+        "response_tokens": 402,
+        "total_tokens": 504
+      }
+    },
+    {
+      "query": "What are the tax implications of selling my stock investments?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "Should I pay off my mortgage early or invest that money?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "What's the difference between stocks and bonds?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    }
+  ],
+  "summary_stats": {
+    "judge": "gemini-1.5-flash",
+    "LLM": "mistralai/mistral-small-3.2-24b-instruct:free",
+    "avg_faithfulness": 1.0,
+    "avg_hallucination": 0.1,
+    "avg_answer_relevance": 1.0,
+    "avg_context_relevance": NaN,
+    "min_faithfulness": 1.0,
+    "max_faithfulness": 1.0,
+    "min_hallucination": 0.0,
+    "max_hallucination": 0.2,
+    "min_answer_relevance": 1.0,
+    "max_answer_relevance": 1.0,
+    "min_context_relevance": NaN,
+    "max_context_relevance": NaN,
+    "success_rate": 40.0,
+    "total_tokens_used": 1084.0,
+    "avg_tokens_per_query": 542.0,
+    "avg_context_tokens": 94.0,
+    "avg_response_tokens": 438.0,
+    "max_tokens_query": 580.0,
+    "context_cost": 9.400000000000001e-06,
+    "response_cost": 8.76e-05,
+    "total_token_cost": 9.7e-05
+  },
+  "chart_path": "evaluation_results_20250715_181348_chart.png",
+  "query_map": {
+    "Q1": "What investment strategies should I consider based on my risk profile?",
+    "Q2": "How should I allocate my retirement portfolio?",
+    "Q3": "What are the tax implications of selling my stock investments?",
+    "Q4": "Should I pay off my mortgage early or invest that money?",
+    "Q5": "What's the difference between stocks and bonds?"
+  }
+}

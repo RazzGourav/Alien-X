@@ -221,3 +221,5 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+# Ignore local service account credentials
+Lumen RAG/server/lumenai-*.json

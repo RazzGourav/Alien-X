@@ -1,0 +1,32 @@
+{
+  "user_id": "test_user_123",
+  "risk_tolerance": "moderate",
+  "financial_goals": [
+    "investment",
+    "investment growth",
+    "retirement"
+  ],
+  "investment_horizon": "long-term",
+  "preferences": {
+    "sustainability": 0.5,
+    "technology": 0.17149999999999996,
+    "healthcare": 0.17149999999999996
+  },
+  "interaction_history": [
+    {
+      "query": "should i currently invest in stocks",
+      "timestamp": "2025-04-22T03:27:37.666177",
+      "response_summary": "\n\nOkay, based on the information available, my advice regarding investing in stocks right now is cau..."
+    },
+    {
+      "query": "should i currently invest in stocks",
+      "timestamp": "2025-04-22T03:34:44.748512",
+      "response_summary": "\n\nOkay, based on the information available, my advice regarding investing in stocks right now is cau..."
+    },
+    {
+      "query": "should i currently invest in stocks",
+      "timestamp": "2025-04-22T03:54:58.229011",
+      "response_summary": "\n\nGiven your moderate risk tolerance and long-term investment goals, including investment growth and..."
+    }
+  ]
+}

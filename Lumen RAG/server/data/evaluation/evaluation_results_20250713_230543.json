@@ -1,0 +1,239 @@
+{
+  "detailed_results": [
+    {
+      "query": "What investment strategies should I consider based on my risk profile?",
+      "response": "Based on your **neutral risk tolerance**, **long-term horizon**, and preferences for sustainability, technology, and healthcare, here\u2019s a tailored strategy:  \n\n### 1. **Balanced Portfolio Allocation**  \n   - **Equities (60-70%)**: Focus on **ESG-aligned sectors** (sustainability) and growth-oriented tech/healthcare stocks. Prioritize companies with strong cash flow management and low debt (as highlighted in the context).  \n   - **Bonds (30-40%)**: Include investment-grade corporate bonds or green bonds to reduce volatility while aligning with sustainability goals.  \n\n### 2. **Risk Mitigation**  \n   - **Diversify across industries** to avoid overexposure to market fluctuations (e.g., avoid \"single source\" revenue risks noted in the context).  \n   - Monitor **debt levels** and **expense concentration** in holdings; rebalance if debt exceeds sector benchmarks.  \n\n### 3. **Tax Optimization**  \n   - Use tax-advantaged retirement accounts (e.g., Roth IRA, 401(k)) for long-term growth. Prioritize tax-efficient ETFs or index funds in taxable accounts.  \n\n### 4. **Active Monitoring**  \n   - Track stock volatility and valuation premiums (per the context). Consider dollar-cost averaging into positions to mitigate downside risk during corrections.  \n   - Reinvest dividends to compound growth, aligning with your retirement and financial security goals.  \n\n### 5. **Sustainability Focus**  \n   - Allocate 10-15% of equities to renewable energy, clean tech, or healthcare innovation ETFs (e.g., ICLN, XHE) to match your preferences.  \n\n**Next Steps**: Review expense ratios in your portfolio to address \"concentrated expenses\" risks. If market valuations appear stretched (as noted), hold a cash reserve (5-10%) for opportunistic buying during corrections.  \n\n*Note: The context suggests caution around debt and cash flow challenges, so prioritize companies with strong balance sheets.*",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the actual output aligns perfectly with all provided contexts, demonstrating a strong understanding and application of the input information. There are no contradictions."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly addresses the user's question about investment strategies based on their risk profile, without any irrelevant information."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 94,
+        "query_tokens": 12,
+        "response_tokens": 414,
+        "total_tokens": 520
+      }
+    },
+    {
+      "query": "How should I allocate my retirement portfolio?",
+      "response": "Based on your **neutral risk tolerance**, **long-term horizon**, and preferences for **sustainability, technology, and healthcare**, here\u2019s a tailored retirement portfolio allocation strategy:  \n\n### 1. **Equity Allocation (60-70%)**  \n   - **Sustainability (20-25%):** Focus on ESG (Environmental, Social, Governance) funds or green energy ETFs to align with your sustainability preference while mitigating exposure to volatile fossil-fuel sectors.  \n   - **Technology (15-20%):** Invest in diversified tech ETFs (e.g., broad-market tech indices) rather than individual stocks to reduce volatility risks highlighted in the context.  \n   - **Healthcare (10-15%):** Allocate to healthcare sector funds with strong cash flow metrics (per the",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.4,
+          "reason": "The score is 0.40 because the actual output partially aligns with the context by addressing some aspects of a conservative financial strategy (monitoring stock performance and debt, mitigating volatility), but omits crucial elements like market fluctuation vulnerability, expense concentration, and market valuation, which were highlighted in the context."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly addresses the user's question about retirement portfolio allocation."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 94,
+        "query_tokens": 8,
+        "response_tokens": 162,
+        "total_tokens": 264
+      }
+    },
+    {
+      "query": "What are the tax implications of selling my stock investments?",
+      "response": "**Advisory Response:**  \nThe retrieved context does not contain specific information about tax implications related to selling stock investments. However, based on your profile (neutral risk tolerance, long-term horizon, and tax optimization goals), here\u2019s tailored general guidance:  \n\n1. **Capital Gains Tax:**  \n   - If you held the stock for **over one year**, gains are taxed at long-term capital gains rates (0%, 15%, or 20% depending on income).  \n   - Short-term holdings (<1 year) are taxed as ordinary income, which could be higher.  \n\n2. **Tax-Loss Harvesting:**  \n   Consider offsetting gains with losses from underperforming investments (e.g., the volatile stock mentioned in the context). This aligns with your goal to optimize taxes and address concerning trends like recent price drops.  \n\n3. **Retirement Accounts:**  \n   If these stocks are in tax-advantaged accounts (e.g., IRA/401(k)), selling within the account incurs no immediate taxes, supporting your retirement and financial security goals.  \n\n4. **Valuation & Timing:**  \n   The context highlights a high P/E ratio and volatility. If selling, prioritize long-term holdings to qualify for lower tax rates, and avoid short-term trades that could increase your tax burden.  \n\n**Next Steps:**  \n- Review holding periods and cost basis for each position.  \n- Consult a tax professional to model scenarios, especially given the stock\u2019s unstable valuation and your focus on sustainability/tech/healthcare sectors.  \n\n*Note: Specific advice would require details like cost basis, income level, and account types.*",
+      "contexts": [
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears",
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "sell-off. The recent trading range (188.38 - 206.45) shows some recent stabilization, but the underlying valuation",
+        "Looking at the stock data, recent trading has been volatile, with a significant drop in price on April 3rd and a subsequent",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "potentially reflecting high growth expectations or investor sentiment that isn't fully supported by current earnings. A P/E",
+        "Looking at the stock data, the recent price action shows volatility. The average price is around $207.22, while the latest",
+        "stretched. Management should clearly articulate the drivers behind the high P/E ratio and demonstrate sustainable",
+        "sales or improved cash flow management is crucial. Furthermore, the high P/E ratio warrants scrutiny. Management"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output hallucinates by discussing tax implications, a topic absent from the context which focuses on financial performance, valuation, risk management, and specific stock price movements.  The output fails to address key elements from the context, such as monitoring stock performance, debt levels, justifying a premium based on growth, and analyzing the recent trading range and price drops."
+        },
+        "answer_relevancy": {
+          "score": 0.9,
+          "reason": "The score is 0.90 because the response lacks complete tax information, with one statement deemed irrelevant to tax implications. While mostly addressing the query, minor improvements in comprehensiveness would raise the score."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 211,
+        "query_tokens": 11,
+        "response_tokens": 331,
+        "total_tokens": 553
+      }
+    },
+    {
+      "query": "Should I pay off my mortgage early or invest that money?",
+      "response": "Based on your profile and the available context:  \n**A balanced approach is recommended**, but with a slight tilt toward addressing debt management given the retrieved context\u2019s emphasis on monitoring debt levels, cash flow optimization, and conservative financial strategies.  \n\n### Key Considerations:  \n1. **Debt vs. Investment Trade-Off**:  \n   - If your mortgage interest rate is **higher than the expected long-term returns** (after taxes) from investments (historically ~7-10% for equities), prioritize paying off debt.  \n   - If the rate is **low** (e.g., below 5-6%), investing the surplus could align better with your long-term goals (retirement, financial security) and preferences (sustainability/tech sectors).  \n\n2. **Risk Tolerance & Market Conditions**:  \n   - The context highlights concerns about stock volatility and market corrections. With a **neutral risk tolerance**, ensure your portfolio is diversified (e.g., mix of equities in sustainability/healthcare/tech and bonds) to mitigate downside risk.  \n\n3. **Tax Optimization**:  \n   - Mortgage interest deductions (if applicable in your tax jurisdiction) could reduce the effective cost of debt, favoring investing. Conversely, tax-advantaged retirement accounts (e.g., 401(k), IRA) offer compounding benefits that might outweigh debt repayment.  \n\n4. **Cash Flow & Liquidity**:  \n   - The context stresses the importance of cash flow management. Ensure you retain an emergency fund (3-6 months of expenses) before allocating extra funds to either debt or investments.  \n\n### Recommendation:  \n**Split the surplus** between debt repayment and investments. For example:  \n- Use 50-70% of extra funds to pay down the mortgage (reducing interest costs and improving financial security).  \n- Allocate 30-50% to a diversified portfolio aligned with your sustainability/tech/healthcare preferences (e.g., ESG ETFs, sector-specific index funds).  \n\n**Next Steps**:  \n- Calculate your mortgage\u2019s effective interest rate post-tax deductions.  \n- Compare it to projected investment returns (adjusting for your risk tolerance and the context\u2019s caution about market valuations).  \n- Revisit this balance annually or if your financial situation changes.  \n\nIf precise mortgage/investment return details are unavailable, prioritize debt reduction for guaranteed \"returns\" (saved interest) while maintaining minimal market exposure for growth.",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "strategic asset sales or improved cash flow management is crucial. Furthermore, the market?s valuation appears",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "revenue into profit. Without further context, it?s reasonable to assume this individual is effectively managing their",
+        "**Note:** I've assumed the currency is USD based on the numbers. If a different currency is used, the analysis would"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.2,
+          "reason": "The score is 0.20 because the output aligns with multiple contexts regarding debt management, asset sales, stock volatility, and currency impact; however, it omits a key aspect of revenue management from the fourth context."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly addresses the user's question about whether to pay off their mortgage early or invest, providing relevant information and considerations for both options."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 101,
+        "query_tokens": 12,
+        "response_tokens": 491,
+        "total_tokens": 604
+      }
+    },
+    {
+      "query": "What's the difference between stocks and bonds?",
+      "response": "**Stocks vs. Bonds: Key Differences & Personalized Guidance**  \nStocks represent ownership in a company, offering potential capital appreciation and dividends but with higher volatility (as highlighted in the retrieved context, where high P/E ratios suggest growth expectations may outpace current earnings). Bonds are debt instruments providing fixed income with lower risk, as they involve lending money to entities (e.g., governments or corporations) in exchange for periodic interest payments and principal repayment.  \n\n**Tailored Advice for Your Profile:**  \n1. **Risk & Goals Alignment**: Your neutral risk tolerance and long-term horizon (retirement, financial security) suggest a balanced portfolio. Stocks could align with your growth objectives, but the context warns of overvaluation risks (e.g., high P/E ratios). Consider diversifying with bonds to stabilize returns and reduce exposure to market corrections.  \n2. **Sector Preferences**: Your interest in sustainability, technology, and healthcare could guide stock selection (e.g., ESG-focused equities or innovative healthcare ETFs). However, ensure these holdings are diversified to avoid concentration risks (as noted in the context about expense vulnerabilities).  \n3. **Tax Optimization**: Municipal bonds or tax-efficient retirement accounts (e.g., Roth IRA) could help minimize tax liabilities while securing steady income.  \n4. **Concerning Trends**: The context highlights volatility and potential corrections. Rebalance periodically to maintain your risk tolerance, and consider bonds as a hedge against equity downturns.  \n\n**Next Steps**:  \n- Allocate a portion of your portfolio to investment-grade bonds (e.g., corporate or municipal) for stability.  \n- Pair growth-oriented stocks (in your preferred sectors) with dividend-paying equities to balance risk.  \n- Monitor P/E ratios and sector trends to avoid overvalued positions.  \n\n*Note: Specific recommendations require deeper financial data, but this framework aligns with your goals and the provided context.*",
+      "contexts": [
+        "potentially reflecting high growth expectations or investor sentiment that isn't fully supported by current earnings. A P/E",
+        "potentially reflecting high growth expectations or investor sentiment. A P/E ratio significantly above 20 is generally",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "growth to justify the premium. Monitoring the stock?s volatility and potential for further corrections is also advised. A",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the actual output aligns perfectly with the provided context across multiple points, demonstrating no hallucinations or contradictions."
+        },
+        "answer_relevancy": {
+          "score": 0.38461538461538464,
+          "reason": "The score is 0.38 because the response included irrelevant information about individual investment factors, strategies, and risks, rather than focusing on the core differences between stocks and bonds."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 98,
+        "query_tokens": 9,
+        "response_tokens": 381,
+        "total_tokens": 488
+      }
+    },
+    {
+      "query": "How can I reduce my tax liability legally?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-1.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 50\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 38\n}\n]"
+    },
+    {
+      "query": "What are the pros and cons of index funds versus actively managed funds?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-1.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 50\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 14\n}\n]"
+    },
+    {
+      "query": "What should I consider when planning for retirement in my 40s?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-1.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 50\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 18\n}\n]"
+    }
+  ],
+  "summary_stats": {
+    "judge": "gemini-1.5-flash",
+    "LLM": "deepseek/deepseek-r1:free",
+    "avg_faithfulness": 1.0,
+    "avg_hallucination": 0.32,
+    "avg_answer_relevance": 0.8569230769230769,
+    "avg_context_relevance": NaN,
+    "min_faithfulness": 1.0,
+    "max_faithfulness": 1.0,
+    "min_hallucination": 0.0,
+    "max_hallucination": 1.0,
+    "min_answer_relevance": 0.38461538461538464,
+    "max_answer_relevance": 1.0,
+    "min_context_relevance": NaN,
+    "max_context_relevance": NaN,
+    "success_rate": 62.5,
+    "total_tokens_used": 2429.0,
+    "avg_tokens_per_query": 485.8,
+    "avg_context_tokens": 119.6,
+    "avg_response_tokens": 355.8,
+    "max_tokens_query": 604.0,
+    "context_cost": 0.00026910000000000004,
+    "response_cost": 0.0038248499999999994,
+    "total_token_cost": 0.00409395
+  },
+  "chart_path": "evaluation_results_20250713_230543_chart.png",
+  "query_map": {
+    "Q1": "What investment strategies should I consider based on my risk profile?",
+    "Q2": "How should I allocate my retirement portfolio?",
+    "Q3": "What are the tax implications of selling my stock investments?",
+    "Q4": "Should I pay off my mortgage early or invest that money?",
+    "Q5": "What's the difference between stocks and bonds?",
+    "Q6": "How can I reduce my tax liability legally?",
+    "Q7": "What are the pros and cons of index funds versus actively managed funds?",
+    "Q8": "What should I consider when planning for retirement in my 40s?"
+  }
+}

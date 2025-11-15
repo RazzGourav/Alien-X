@@ -1,0 +1,244 @@
+{
+  "detailed_results": [
+    {
+      "query": "What investment strategies should I consider based on my risk profile?",
+      "response": "Okay, based on your moderate risk tolerance and long-term investment horizon, a more conservative financial strategy is advisable. \n\nThe context suggests a need to closely monitor your investment performance and debt levels. It\u2019s important to avoid concentrating your investments in a single source, as this can increase vulnerability to market fluctuations. \n\nGiven your preferences for sustainability, technology, and healthcare (with a weighting of 50% for sustainability), you should consider investments within these sectors. However, due to your moderate risk tolerance, a diversified approach is key. \n\n**Here\u2019s a suggested strategy:**\n\n*   **Diversified Portfolio:** Allocate your investments across a range of asset classes, including stocks, bonds, and potentially real estate.\n*   **Index Funds/ETFs:**  Given your long-term horizon, low-cost index funds or Exchange-Traded Funds (ETFs) that track broad market indexes (like the S&P 500) could be a good starting point. This provides instant diversification.\n*   **Sustainable Investments:**  Given your preference for sustainability (50%), consider ESG (Environmental, Social, and Governance) funds or ETFs. These focus on companies with strong sustainability practices.\n*   **Sector Allocation:** Allocate a portion of your portfolio to technology (17%) and healthcare (17%) sectors, aligning with your stated preferences.\n\n**Important Note:** The provided context emphasizes the importance of understanding your expenses.  Analyzing where your money is going \u2013 fixed versus variable costs \u2013 is crucial for effective financial management and potentially identifying areas for optimization. \n\n**Disclaimer:** *I am an AI Chatbot and not a qualified financial advisor. This information is for general guidance only. It\u2019s essential to consult with a professional financial advisor to develop a personalized investment strategy tailored to your specific circumstances and goals.*",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "consistent performance? Understanding the composition of expenses (e.g., fixed vs. variable) would provide a more"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.25,
+          "reason": "The score is 0.25 because while the output aligns with the context's emphasis on conservative strategies, diversification, and expense analysis, it omits the context's expectation of explicit company-specific financial metric examination."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response is perfectly relevant and directly addresses the user's question about investment strategies based on risk profile.  There are no irrelevant statements."
+        },
+        "contextual_relevancy": {
+          "score": 0.42857142857142855,
+          "reason": "The score is 0.43 because while some statements like \"Monitoring the stock?s performance and debt levels closely is advised.\" and \"A more conservative financial strategy is\" offer *slightly* relevant advice,  many statements are deemed irrelevant, including those about \"market vulnerability,\" \"expense concentration,\" and \"company analysis.\"  The overall relevance is thus low due to the significant portion of irrelevant information."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 76,
+        "query_tokens": 12,
+        "response_tokens": 361,
+        "total_tokens": 449
+      }
+    },
+    {
+      "query": "How should I allocate my retirement portfolio?",
+      "response": "Okay, based on your moderate risk tolerance, long-term investment horizon, and desire for a retirement portfolio incorporating sustainability, technology, and healthcare, here\u2019s a preliminary approach, keeping in mind the limited information available:\n\nGiven the advice to \u201cclosely monitor the stock\u2019s performance and debt levels,\u201d a conservative financial strategy is recommended. This suggests a portfolio that prioritizes stability and diversification to mitigate risk.\n\n**Suggested Portfolio Allocation (Preliminary):**\n\n*   **Equities (50-60%):**  Given your long-term horizon, a significant portion should be in stocks.  Within this allocation, consider a blend:\n    *   **Technology (25-30%):** Reflecting your preference, allocate a portion to technology stocks. However, be mindful of the potential volatility of this sector.\n    *   **Healthcare (25-30%):**  Aligning with your preference, invest in healthcare companies. This sector is generally considered more stable than technology.\n    *   **Sustainability Focused Funds (10-15%):** Invest in funds that focus on companies with strong environmental, social, and governance (ESG) practices. This aligns with your sustainability preference.\n\n*   **Fixed Income (30-40%):**  A substantial portion should be in bonds to provide stability and reduce overall portfolio volatility. Consider a mix of government and corporate bonds.\n\n*   **Alternatives (5-10%):**  This small allocation could include real estate investment trusts (REITs) or other diversified assets to further reduce risk and potentially enhance returns.\n\n**Important Considerations (Based on Context):**\n\n*   **Expense Monitoring:** The context highlights the importance of understanding your expenses. Ensure your investment fees are low to maximize returns.\n*   **Diversification:**  Avoid concentrating your investments in a single stock or sector. Diversification is key to managing risk.\n\n**Disclaimer:** *This advice is based solely on the limited information provided. It is not a comprehensive financial plan and should not be considered investment advice.  A full financial plan requires a detailed assessment of your complete financial situation, including income, debts, and other assets.*\n\n**Next Steps:**\n\nTo provide more tailored advice, I would need more information about your current financial situation, including:\n\n*   Your current income and expenses.\n*   Any existing debts or savings.\n*   The amount you plan to contribute to your retirement portfolio regularly.\n\nWould you like to discuss these additional factors to refine your portfolio strategy?",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "consistent performance? Understanding the composition of expenses (e.g., fixed vs. variable) would provide a more"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the actual output aligns perfectly with the provided context, addressing all key aspects of the advice, concerns, and data mentioned."
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the response directly addresses the user's question about retirement portfolio allocation."
+        },
+        "contextual_relevancy": {
+          "score": 0.14285714285714285,
+          "reason": "The score is 0.14 because only one statement, \"A more conservative financial strategy is\", offers limited relevance to retirement portfolio allocation, while other statements like \"Monitoring the stock?s performance and debt levels closely is advised\" and those on market vulnerability, expense concentration, and company analysis are deemed irrelevant."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 76,
+        "query_tokens": 8,
+        "response_tokens": 508,
+        "total_tokens": 592
+      }
+    },
+    {
+      "query": "What are the tax implications of selling my stock investments?",
+      "response": "Okay, let\u2019s address the tax implications of selling your stock investments, keeping in mind your moderate risk tolerance, long-term investment horizon, and preferences for sustainability, technology, and healthcare.\n\nBased solely on the provided context, I can\u2019t give you specific tax advice. The document primarily focuses on analyzing a company\u2019s stock performance \u2013 volatility, price action, and a high P/E ratio \u2013 and highlights the need for management to demonstrate sustainable growth. \n\nHowever, I can offer some general guidance regarding the tax implications of selling stock, which aligns with your long-term retirement planning goals:\n\n**General Tax Implications of Selling Stock:**\n\n*   **Capital Gains Tax:** When you sell a stock for more than you paid for it (your \u201cbasis\u201d), you\u2019ll likely owe capital gains tax.\n    *   **Short-Term Capital Gains:** If you held the stock for one year or less, the profit is taxed as ordinary income, which is typically at your regular income tax rate.\n    *   **Long-Term Capital Gains:** If you held the stock for more than one year, the profit is taxed at a lower, preferential rate \u2013 currently 0%, 15%, or 20% depending on your income level.\n\n*   **Wash Sale Rule:** Be aware of the wash sale rule. If you sell a stock at a loss and repurchase it within 30 days before or after the sale, the loss may not be deductible.\n\n**Considering Your Profile:**\n\nGiven your moderate risk tolerance and long-term investment horizon, it\u2019s generally wise to hold investments for the long haul to benefit from the potential for long-term capital gains taxed at lower rates.  However, it\u2019s crucial to consult with a qualified tax advisor or accountant to determine the specific tax implications of any sale based on your individual circumstances and the specific stocks you hold.\n\n**Disclaimer:** *I am an AI Chatbot and not a financial advisor. This information is for general guidance only and does not constitute professional financial advice. It is essential to consult with a qualified professional before making any investment decisions.*\n\nWould you like me to explore any of these aspects in more detail, or perhaps discuss strategies for minimizing your tax burden on investments (beyond the immediate sale)?",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "Looking at the stock data, the recent price action shows volatility. The average price is around $207.22, while the latest",
+        "sales or improved cash flow management is crucial. Furthermore, the high P/E ratio warrants scrutiny. Management",
+        "should clearly articulate the factors driving this premium valuation and demonstrate sustainable growth to justify it."
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output completely deviates from the context by focusing on tax implications of stock sales, ignoring the context's focus on stock performance, debt levels, and the need for sustainable growth to justify a high P/E ratio."
+        },
+        "answer_relevancy": {
+          "score": 0.4782608695652174,
+          "reason": "The score is 0.48 because the response contained several irrelevant statements regarding investment strategies (risk tolerance, investment horizon, retirement goals, etc.), which are separate from the core question about tax implications.  While some relevant tax information may have been present, the inclusion of numerous unrelated points significantly lowered the relevancy score."
+        },
+        "contextual_relevancy": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the provided retrieval context is completely irrelevant to the input question about tax implications of selling stock investments.  All statements in the retrieval context are deemed irrelevant, including  \"Monitoring the stock?s performance and debt levels closely is advised.\" and \"sales or improved cash flow management is crucial.\""
+        }
+      },
+      "token_usage": {
+        "context_tokens": 99,
+        "query_tokens": 11,
+        "response_tokens": 452,
+        "total_tokens": 562
+      }
+    },
+    {
+      "query": "Should I pay off my mortgage early or invest that money?",
+      "response": "Okay, let\u2019s address your question about paying off your mortgage early versus investing that money.\n\nBased on your profile \u2013 a moderate risk tolerance, long-term investment horizon, and goals of retirement, investment, and tax optimization \u2013 a conservative financial strategy is generally recommended. The retrieved document emphasizes the importance of monitoring your stock performance and debt levels.\n\n**Here\u2019s my advice, specifically considering your query:**\n\nGiven your moderate risk tolerance and long-term goals, paying off your mortgage early offers significant benefits. Mortgage interest is a tax-deductible expense, which reduces your overall tax liability.  Furthermore, eliminating your mortgage principal reduces a significant monthly expense and provides peace of mind.\n\nHowever, the document also suggests a need to ensure revenue is converted into profit. This implies a focus on efficient financial management.  Therefore, before aggressively prioritizing mortgage payoff, it\u2019s crucial to ensure you have a solid financial foundation \u2013 an emergency fund, and that your income is stable.\n\n**I cannot provide specific investment recommendations based solely on the provided context.**  However, considering your preferences for sustainability (0.5), technology (0.35), and healthcare (0.35), a diversified portfolio aligned with these interests would be appropriate. \n\n**General Recommendation:**\n\nI would suggest a balanced approach.  First, solidify your financial health \u2013 build an emergency fund (3-6 months of living expenses). Then, analyze your cash flow to determine if aggressively paying down the mortgage is feasible *without* significantly impacting your ability to invest for your long-term goals.  \n\n**To help me provide more tailored advice, could you tell me:**\n\n*   What is the interest rate on your mortgage?\n*   What is your current income and expenses?\n*   What is the expected return you could earn on investments compared to the mortgage interest rate?",
+      "contexts": [
+        "Monitoring the stock?s performance and debt levels closely is advised. A more conservative financial strategy is",
+        "revenue into profit. Without further context, it?s reasonable to assume this individual is effectively managing their",
+        "**Note:** I've assumed the currency is USD based on the numbers. If a different currency is used, the analysis would"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions."
+        },
+        "hallucination": {
+          "score": 0.3333333333333333,
+          "reason": "The score is 0.33 because the output aligns with some aspects of the provided contexts (monitoring stock performance and debt levels, recommending a conservative strategy), but contradicts others by omitting the currency information mentioned in the third context."
+        },
+        "answer_relevancy": {
+          "score": 0.8823529411764706,
+          "reason": "The score is 0.88 because the response contains some irrelevant information, such as a limitation of the model and a specific investment recommendation, which are outside the scope of the original question about paying off a mortgage early versus investing."
+        },
+        "contextual_relevancy": {
+          "score": 0.0,
+          "reason": "The score is 0.00 because the provided retrieval context is completely irrelevant to the input question.  The reasons for irrelevancy highlight this, stating that the context discusses \"monitoring stock performance and debt levels,\" which is unrelated to the mortgage payoff vs. investment dilemma, and an \"incomplete\" statement provides no relevant information."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 62,
+        "query_tokens": 12,
+        "response_tokens": 365,
+        "total_tokens": 439
+      }
+    },
+    {
+      "query": "What's the difference between stocks and bonds?",
+      "response": "Okay, let\u2019s address your question about the difference between stocks and bonds.\n\nBased on your profile \u2013 aiming for long-term investment growth, with a moderate risk tolerance and preferences for sustainability, technology, and healthcare \u2013 understanding the distinctions between stocks and bonds is crucial.\n\n**Here\u2019s the breakdown:**\n\n*   **Stocks (Equities):** When you buy stock in a company, you\u2019re buying a small piece of ownership.  The value of a stock can go up significantly if the company does well, offering potential for higher returns. However, stocks are generally considered riskier than bonds because their value can fluctuate considerably. Given your moderate risk tolerance, we\u2019ll want to ensure a balanced portfolio with stocks, but not overexpose yourself to potentially volatile investments.\n\n*   **Bonds (Fixed Income):** When you buy a bond, you\u2019re essentially lending money to a company or government. In return, they promise to pay you back the principal amount (the original loan) at a specific date, along with regular interest payments. Bonds are typically considered less risky than stocks because they offer a more predictable income stream. \n\n**Considering your goals and preferences:**\n\n*   **Retirement Planning & Investment Growth:** Bonds can provide stability and income to your portfolio, which is important for long-term goals like retirement.\n*   **Sustainability & Sector Preferences:**  You\u2019ve indicated an interest in sustainability, technology, and healthcare.  Companies in these sectors can be represented through both stocks and bonds.  We\u2019ll want to research specific companies within these sectors to align with your values.\n*   **Mortgage Payoff & Tax Optimization:** Bonds can be a useful tool for generating income to help with mortgage payments and potentially for tax-advantaged accounts.\n\n**Important Note (Based on the Context):** The provided context mentions volatility and a high P/E ratio. This suggests a potential concern with the company being analyzed \u2013 a single source of information can be risky.  This reinforces the need for diversification across different asset classes (stocks and bonds) to mitigate risk.\n\n**Disclaimer:** *I am an AI and cannot provide financial advice. This information is for educational purposes only. It\u2019s essential to consult with a qualified financial advisor to discuss your specific situation and create a personalized investment strategy.*\n\nWould you like me to delve deeper into how stocks and bonds might fit into a portfolio tailored to your goals, or perhaps explore specific sectors you\u2019re interested in (technology, healthcare, or sustainability)?",
+      "contexts": [
+        "potentially reflecting high growth expectations or investor sentiment. A P/E ratio significantly above 20 is generally",
+        "This analysis examines a company based on the provided financial metrics and recent stock data. The company",
+        "single source, making it vulnerable to market fluctuations? Are expenses concentrated in a few areas, potentially",
+        "Looking at the stock data, the recent price action shows volatility. The average price is around $207.22, while the latest"
+      ],
+      "evaluation": {
+        "faithfulness": {
+          "score": 0.9285714285714286,
+          "reason": "The score is 0.93 because the actual output may have included claims about volatility and a high P/E ratio, which are not supported by the context that only mentions an average price of $207.22."
+        },
+        "hallucination": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output is completely unrelated to the provided context, focusing on stocks and bonds instead of company analysis and stock data."
+        },
+        "answer_relevancy": {
+          "score": 0.47058823529411764,
+          "reason": "The score is 0.47 because the response contained several irrelevant statements about user interests, investment strategies, and risk management, which did not directly address the core question of the difference between stocks and bonds.  While some relevant information might have been present, the significant portion of irrelevant content lowered the overall score."
+        },
+        "contextual_relevancy": {
+          "score": 0.16666666666666666,
+          "reason": "The score is 0.17 because the relevant statement, 'This analysis examines a company based on the provided financial metrics and recent stock data,' offers limited connection to the query about stocks and bonds, while irrelevant statements such as 'The statement is about P/E ratio and does not relate to the difference between stocks and bonds' highlight the significant disconnect between the retrieval context and the input question."
+        }
+      },
+      "token_usage": {
+        "context_tokens": 83,
+        "query_tokens": 9,
+        "response_tokens": 500,
+        "total_tokens": 592
+      }
+    },
+    {
+      "query": "How can I reduce my tax liability legally?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "What are the pros and cons of index funds versus actively managed funds?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    },
+    {
+      "query": "What should I consider when planning for retirement in my 40s?",
+      "response": "Error occurred",
+      "contexts": [],
+      "evaluation": {},
+      "token_usage": {
+        "context_tokens": 0,
+        "query_tokens": 0,
+        "response_tokens": 0,
+        "total_tokens": 0
+      },
+      "error": "429 Resource has been exhausted (e.g. check quota)."
+    }
+  ],
+  "summary_stats": {
+    "avg_faithfulness": 0.9857142857142858,
+    "avg_hallucination": 0.5166666666666666,
+    "avg_answer_relevance": 0.7662404092071611,
+    "avg_context_relevance": 0.1476190476190476,
+    "min_faithfulness": 0.9285714285714286,
+    "max_faithfulness": 1.0,
+    "min_hallucination": 0.0,
+    "max_hallucination": 1.0,
+    "min_answer_relevance": 0.47058823529411764,
+    "max_answer_relevance": 1.0,
+    "min_context_relevance": 0.0,
+    "max_context_relevance": 0.42857142857142855,
+    "success_rate": 62.5,
+    "total_tokens_used": 2634.0,
+    "avg_tokens_per_query": 526.8,
+    "avg_context_tokens": 79.2,
+    "avg_response_tokens": 437.2,
+    "max_tokens_query": 592.0
+  },
+  "chart_path": "evaluation_results_20250621_203350_chart.png",
+  "query_map": {
+    "Q1": "What investment strategies should I consider based on my risk profile?",
+    "Q2": "How should I allocate my retirement portfolio?",
+    "Q3": "What are the tax implications of selling my stock investments?",
+    "Q4": "Should I pay off my mortgage early or invest that money?",
+    "Q5": "What's the difference between stocks and bonds?",
+    "Q6": "How can I reduce my tax liability legally?",
+    "Q7": "What are the pros and cons of index funds versus actively managed funds?",
+    "Q8": "What should I consider when planning for retirement in my 40s?"
+  }
+}
