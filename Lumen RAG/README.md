@@ -1,4 +1,4 @@
-# Minor 2 Final Project: Personalized Financial Advisor
+# Lumen RAG financial Advisior
 
 An AI-powered platform delivering highly personalized financial advice via Retrieval-Augmented Generation (RAG).  
 It combines a Next.js client, a Python FastAPI server, Pinecone vector search, a Neo4j knowledge graph, and large language models (Google Gemini or alternatives) to give users tailored, factual financial guidance based on their profile and uploaded documents.
@@ -55,7 +55,7 @@ It combines a Next.js client, a Python FastAPI server, Pinecone vector search, a
 ## Architecture & Folder Structure
 
 ```text
-minor-phase-2-project/
+Lumen RAG/
 ├── client/                     # Next.js front-end
 │   ├── app/                    # Pages & API routes
 │   ├── components/             # React components
@@ -162,4 +162,4 @@ python scripts/evaluate.py
 
 ## License
 This project is licensed under the MIT License.
-© 2025 Lucky110405
+© 2025 Gourav
