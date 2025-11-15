@@ -43,15 +43,3 @@ LUMEN solves this by moving finance from static recordkeeping to **autonomous, A
 
 ***
 
-## ⚙️ Setup & Development Roadmap (24-Hour MVP)
-
-[cite_start]This project was developed under a strict 24-hour roadmap designed for parallel, integrated development[cite: 54].
-
-### Key Phases Demonstrated:
-
-| Phase | Hours | Goal Demonstrated |
-| :--- | :--- | :--- |
-| **Phase 1-2** | 0-8 | [cite_start]**The Core Data Pipeline:** Ingest (DocAI) -> Process -> Store (BigQuery/Firestore)[cite: 70]. |
-| **Phase 3** | 8-14 | [cite_start]**The "Brain" (Conversational AI):** Built the core Q&A loop using BigQuery data and Gemini[cite: 79]. |
-| **Phase 4** | 14-18 | [cite_start]**The "Novelty" (Agentic & Proactive):** Implemented the **Proactive Financial Coach** (report generation) and the **Dynamic Budget Enforcer**[cite: 87]. |
-| **Phase 5** | 18-22 | **Refinement & UX:** Developed the final, innovative UI/UX (Tabbed Expenses, Floating Cards, Scrolling Animations) and implemented end-to-end security via Clerk tokens. |
